@@ -1,4 +1,4 @@
-# Rapport SAE 2.03
+*# Rapport SAE 2.03
 
 ## __Questions semaine 1__
 
@@ -150,4 +150,4 @@
 
     Pour installer les paquets ci-dessus automatiquement pendant l'installation de la machine virtuelle, il faut ajouter, dans le fichier `preseed-fr.cfg`, la ligne suivante :
 
-        d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
+        d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch*

@@ -1,0 +1,133 @@
+= Rapport SAE 2.03
+
+== Questions semaine 1
+
+=== Questions 1 : Configuration matérielle dans VirtualBox
+
+*Que signifie "64-bit" dans "Debian 64-bit" ?*
+
+Dans "Debian 64-bit", "64-bit" fait référence à l'architecture du système d'exploitation. Cela signifie que le système est conçu pour fonctionner sur des processeurs 64 bits, capables de traiter plus de données simultanément que les processeurs 32 bits.
+
+*Quelle est la configuration réseau utilisée par défaut ?*
+
+Par défaut, VirtualBox utilise le mode de connexion réseau "NAT" (Network Address Translation). Dans ce mode, la machine virtuelle partage l'adresse IP de l'hôte et se connecte au réseau via celui-ci, permettant l'accès à Internet tout en restant inaccessible depuis l'extérieur.
+
+*Quel est le nom du fichier XML contenant la configuration de votre machine ?*
+
+Le fichier s'appelle `sae203.vbox` et se trouve dans le dossier de la machine virtuelle. Sur les machines TP, il se trouve dans :
+
+----
+/usr/local/virtual_machine/infoetu/{login}/vbox_vms/sae203/
+----
+
+où `{login}` est votre identifiant.
+
+*Sauriez-vous modifier directement ce fichier de configuration pour mettre 2 processeurs à votre machine ?*
+
+[WARNING]
+Avant de modifier ce fichier, éteignez la machine virtuelle; sinon, les modifications seront écrasées au prochain redémarrage.
+
+Dans la section `<CPU>` de `sae203.vbox`, modifiez l'attribut `count` à 2.
+
+*** 
+=== Questions 2. Installation de base
+
+*Qu’est-ce qu’un fichier ISO bootable ?*
+
+Un fichier ISO bootable est une image disque utilisée pour démarrer un ordinateur ou installer un système d'exploitation et/ou des logiciels.
+
+*Qu’est-ce que MATE ? GNOME ?*
+
+- MATE : Environnement de bureau léger et classique, dérivé de GNOME 2.
+- GNOME : Environnement de bureau moderne, minimaliste et axé sur la simplicité.
+
+*Qu’est-ce qu’un serveur web ?*
+
+Un serveur web est un logiciel hébergeant des sites et applications web, accessibles via HTTP.
+
+*Qu’est-ce qu’un serveur SSH ?*
+
+Un serveur SSH permet un accès à distance sécurisé au système, grâce à un chiffrement des communications.
+
+*Qu’est-ce qu’un serveur mandataire ?*
+
+Un serveur mandataire (proxy) est un intermédiaire entre client et serveur, servant à filtrer et sécuriser les requêtes.
+
+*** 
+=== Question(s) 3 : sudo
+
+*Comment peux-ton savoir à quels groupes appartient l’utilisateur user ?*
+
+Utilisez la commande:
+----
+groups "user"
+----
+
+*** 
+=== Questions 4.1 : Suppléments invités
+
+*Quel est la version du noyau Linux utilisé par votre VM ? Justifiez votre réponse.*
+
+Exécutez la commande:
+----
+uname -r
+----
+Ce qui donne par exemple `6.1.0-31-amd64`.
+
+*À quoi servent les suppléments invités ? Donnez 2 principales raisons de les installer.*
+
+Ils améliorent les performances graphiques, le partage des dossiers et périphériques entre l'hôte et la VM (redimensionnement dynamique de la fenêtre, gestion du clipboard, etc.).
+
+*À quoi sert la commande mount (dans notre cas et en général) ?*
+
+La commande mount sert à monter un périphérique de stockage ou système de fichiers sur un répertoire spécifique. Ici, elle monte le CD des suppléments invités sur un répertoire du système.
+
+*** 
+=== Questions 4.2 : Quelques Questions
+
+*Qu’est-ce que le Projet Debian ? D’où vient le nom Debian ?*
+
+Le Projet Debian est une organisation communautaire développant le système d’exploitation Debian, composé de logiciels libres. Le nom "Debian" provient de la combinaison du prénom de son fondateur, Ian Murdock, et de celui de sa compagne de l'époque, Debra Lynn.
+
+*Quelles sont les durées de prise en charge (support) des versions Debian ? Pendant combien de temps les mises à jour de sécurité sont-elles assurées ?*
+
+- Durée minimale : 1 an après la sortie de la version suivante.
+- Support long terme (LTS) : 5 ans depuis la date de sortie initiale.
+- Support long terme étendu (ELTS) : Jusqu’à 5 ans supplémentaires après le LTS, totalisant 10 ans.
+
+*Combien de versions sont activement maintenues par Debian ? Quelles sont leurs dénominations génériques ?*
+
+Debian maintient au moins trois versions :
+- Stable : Version stable actuelle, recommandée.
+- Testing : Future version stable en cours de test.
+- Unstable : Version de développement avec les dernières mises à jour.
+
+*D’où viennent les noms de code des distributions majeures Debian ?*
+
+Les noms de code proviennent des personnages du film "Toy Story" de Pixar.
+- Première version (Debian 1.1) : Nom de code Buzz, annoncée le 16 juin 1996.
+- Dernière version annoncée (Debian 13) : Nom de code Trixie, annoncée le 12 août 2023.
+
+*** 
+=== Question(s) 5. Ajustement de la pré-configuration
+
+*Ajouter le droit d'utiliser sudo à l'utilisateur standard*
+
+Dans le fichier `preseed-fr.cfg`, ajoutez :
+----
+d-i passwd/user-default-groups string audio cdrom video sudo
+----
+
+*Installer l’environnement MATE*
+
+Toujours dans `preseed-fr.cfg`, ajoutez :
+----
+tasksel tasksel/first multiselect standard ssh-server mate-desktop
+----
+
+*Ajouter les paquets suivants : sudo, git, sqlite3, curl, bash-completion, neofetch*
+
+Toujours dans `preseed-fr.cfg`, ajoutez :
+----
+d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
+----

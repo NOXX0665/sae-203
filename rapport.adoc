@@ -24,7 +24,8 @@ où `{login}` est votre identifiant.
 
 *Sauriez-vous modifier directement ce fichier de configuration pour mettre 2 processeurs à votre machine ?*
 
-[WARNING]
+[IMPORTANT]
+.Eteignez la machine virtuelle avant de continuer.
 Avant de modifier ce fichier, éteignez la machine virtuelle; sinon, les modifications seront écrasées au prochain redémarrage.
 
 Dans la section `<CPU>` de `sae203.vbox`, modifiez l'attribut `count` à 2.

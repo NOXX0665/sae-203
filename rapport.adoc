@@ -95,9 +95,19 @@ Le Projet Debian est une organisation communautaire développant le système d�
 
 *Quelles sont les durées de prise en charge (support) des versions Debian ? Pendant combien de temps les mises à jour de sécurité sont-elles assurées ?*
 
-- Durée minimale : 1 an après la sortie de la version suivante.
-- Support long terme (LTS) : 5 ans depuis la date de sortie initiale.
-- Support long terme étendu (ELTS) : Jusqu’à 5 ans supplémentaires après le LTS, totalisant 10 ans.
+.Durées de prise en charge des verions Debian
+|===
+| Durée de support | Mises à jour de sécurité
+
+| Durée minimale
+| 1 an après la sorte de la version suivante
+
+| Support long terme (LTS)
+| 5 ans depuis la date de sortie initiale
+
+| Support long terme étendu (ELTS)
+| Jusqu'à 5 ans supplémentaires après le LTS, totalisant 10 ans
+|===
 
 *Combien de versions sont activement maintenues par Debian ? Quelles sont leurs dénominations génériques ?*
 

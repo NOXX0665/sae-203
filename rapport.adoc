@@ -1,6 +1,7 @@
 = Rapport SAE 2.03
 Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
 :toc:
+:toc-title: Table des matières
 
 == Questions semaine 1
 

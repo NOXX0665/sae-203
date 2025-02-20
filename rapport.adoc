@@ -9,7 +9,7 @@ Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
 
 *Que signifie "64-bit" dans "Debian 64-bit" ?*
 
-Dans "Debian 64-bit", "64-bit" fait référence à l'architecture du système d'exploitation. Cela signifie que le système est conçu pour fonctionner sur des processeurs 64 bits, capables de traiter plus de données simultanément que les processeurs 32 bits.
+Dans "Debian 64-bit", "64-bit" fait référence à l'architecture du système d'exploitation. Cela signifie que le système est conçu pour fonctionner sur des processeurs 64 bits, capables de traiter plus de données simultanément que les processeurs 32 bits^<<source-1,[1]>>^.
 
 *Quelle est la configuration réseau utilisée par défaut ?*
 
@@ -135,3 +135,31 @@ Toujours dans `preseed-fr.cfg`, ajoutez :
 ----
 d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
 ----
+
+[bibliography]
+== Sources
+
+// Le "+" à la fin de chaque ligne est là pour passer la ligne
+// Le "*" au début de chaque ligne est là pour créer une liste non ordonnée (c'est comme ça dans la doc (https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#bibliography))
+
+// Pour rajouter des sources, rajoutez ça dans votre texte : ^<<source-x,[x]>>^
+
+* [[source-1]]Ceci sera la source 1. +
+
+* [[source-2]]Ceci sera la source 2. +
+
+* [[source-3]]Ceci sera la source 3. +
+
+* [[source-4]]Ceci sera la source 4. +
+
+* [[source-5]]Ceci sera la source 5. +
+
+* [[source-6]]Ceci sera la source 6. +
+
+* [[source-7]]Ceci sera la source 7. +
+
+* [[source-8]]Ceci sera la source 8. +
+
+* [[source-9]]Ceci sera la source 9. +
+
+* [[source-10]]Ceci sera la source 10. +

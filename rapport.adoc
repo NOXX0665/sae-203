@@ -204,6 +204,8 @@ Pour l'ouvrir, il suffit de taper la commande `git gui` dans un terminal.
 
 *Pourquoi avez-vous choisi ce logiciel ?*
 
+Nous avons choisi GitHub Desktop pour sa simplicité d'utilisation et sa gestion intuitive des dépôts Git. De plus, il est entièrement gratuit, contrairement à GitKraken qui, bien que plus complet, nécessite une licence payante pour certaines fonctionnalités, notamment l'utilisation avec des dépôts privés.
+
 
 [bibliography]
 == Sources

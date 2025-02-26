@@ -33,14 +33,14 @@ où `+{login}+` est votre identifiant.
 *Sauriez-vous modifier directement ce fichier de configuration pour mettre deux processeurs à votre machine ?*
 
 [IMPORTANT]
-.Eteignez la machine virtuelle avant de continuer.
+.Éteignez la machine virtuelle avant de continuer.
 Avant de modifier ce fichier, éteignez la machine virtuelle sinon, les modifications seront écrasées au prochain redémarrage.
 
 Dans la section `<CPU>` de `sae203.vbox`, modifiez l'attribut `count` à 2 :
 
-[,xml]
+[source, xml]
 ----
-<CPU count="2" hotplug="false">
+<CPU count="2" hotplug="false"/>
 ----
 
 '''
@@ -50,10 +50,25 @@ Dans la section `<CPU>` de `sae203.vbox`, modifiez l'attribut `count` à 2 :
 
 Un fichier ISO bootable est une image disque utilisée pour démarrer un ordinateur ou installer un système d'exploitation et/ou des logiciels^<<source-3,[3]>>^.
 
+.Exemple de fichier ISO
+[caption="Figure 1: "]
+image::img/iso.png[Exemple de iso, width=15%]
+
 *Qu’est-ce que MATE ? GNOME ?*
 
 - MATE : Environnement de bureau léger et classique, dérivé de GNOME 2^<<source-4,[4]>>^.
-- GNOME : Environnement de bureau moderne, minimaliste et axé sur la simplicité^<<source-4,[4]>>^.  
+
+[.text-center]
+.Environment de Mate
+[caption="Figure 2: "]
+image::img/exempleMate.png[Exemple de l'interface de Mate, width=75%]
+
+- GNOME : Environnement de bureau moderne, minimaliste et axé sur la simplicité^<<source-4,[4]>>^.
+
+[.text-center]
+.Environment de Gnome
+[caption="Figure 3: "]
+image::img/exempleGnome.png[Exemple de l'interface de Gnome, width=75%]
 
 *Qu’est-ce qu’un serveur web ?*
 
@@ -72,7 +87,7 @@ Un serveur mandataire (proxy) est un intermédiaire entre client et serveur, ser
 
 *Comment peut-on savoir à quels groupes appartient l’utilisateur "user" ?*
 
-Utilisez la commande^<<source-8,[8]>>^:
+Utilisez la commande^<<source-8,[8]>>^ :
 [,bash]
 ----
 groups "user"

@@ -140,9 +140,10 @@ Le Projet Debian est une organisation communautaire développant le système d�
 *Combien de versions sont activement maintenues par Debian ? Quelles sont leurs dénominations génériques ?*
 
 Debian maintient au moins trois versions :
-- Stable : Version stable actuelle, recommandée.
-- Testing : Future version stable en cours de test.
-- Unstable : Version de développement avec les dernières mises à jour.
+
+. Stable : Version stable actuelle, recommandée.
+. Testing : Future version stable en cours de test.
+. Unstable : Version de développement avec les dernières mises à jour.
 
 *D’où viennent les noms de code des distributions majeures Debian ?*
 

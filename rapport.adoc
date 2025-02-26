@@ -43,20 +43,20 @@ Dans la section `<CPU>` de `sae203.vbox`, modifiez l'attribut `count` à 2 :
 
 *Qu’est-ce qu’un fichier ISO bootable ?*
 
-Un fichier ISO bootable est une image disque utilisée pour démarrer un ordinateur ou installer un système d'exploitation et/ou des logiciels.
+Un fichier ISO bootable est une image disque utilisée pour démarrer un ordinateur ou installer un système d'exploitation et/ou des logiciels^<<source-3,[3]>>^.
 
 *Qu’est-ce que MATE ? GNOME ?*
 
-- MATE : Environnement de bureau léger et classique, dérivé de GNOME 2.
-- GNOME : Environnement de bureau moderne, minimaliste et axé sur la simplicité.
+- MATE : Environnement de bureau léger et classique, dérivé de GNOME 2^<<source-4,[4]>>^.
+- GNOME : Environnement de bureau moderne, minimaliste et axé sur la simplicité^<<source-4,[4]>>^.  
 
 *Qu’est-ce qu’un serveur web ?*
 
-Un serveur web est un logiciel hébergeant des sites et applications web, accessibles via HTTP.
+Un serveur web est un logiciel hébergeant des sites et applications web, accessibles via HTTP^<<source-5,[5]>>^.
 
 *Qu’est-ce qu’un serveur SSH ?*
 
-Un serveur SSH permet un accès à distance sécurisé au système, grâce à un chiffrement des communications.
+Un serveur SSH permet un accès à distance sécurisé au système, grâce à un chiffrement des communications^<<source-6,[6]>>^.
 
 *Qu’est-ce qu’un serveur mandataire ?*
 
@@ -163,13 +163,13 @@ d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
 
 * [[source-2]][2] https://www.it-connect.fr/comprendre-les-differents-types-de-reseaux-virtualbox/. +
 
-* [[source-3]][3] Ceci sera la source 3. +
+* [[source-3]][3] https://www.ionos.fr/digitalguide/serveur/know-how/quest-ce-quun-fichier-iso/ +
 
-* [[source-4]][4] Ceci sera la source 4. +
+* [[source-4]][4] https://fr.linuxadictos.com/diferencias-entre-gnome-mate-y-unity.html +
 
-* [[source-5]][5] Ceci sera la source 5. +
+* [[source-5]][5] https://www.hostinger.fr/tutoriels/serveur-web +
 
-* [[source-6]][6] Ceci sera la source 6. +
+* [[source-6]][6] https://fr.siteground.com/kb/quest-ce-que-ssh-et-comment-puis-je-lutiliser/ +
 
 * [[source-7]][7] Ceci sera la source 7. +
 

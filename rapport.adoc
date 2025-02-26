@@ -13,7 +13,7 @@ Dans "Debian 64-bit", "64-bit" fait référence à l'architecture du système d'
 
 *Quelle est la configuration réseau utilisée par défaut ?*
 
-Par défaut, VirtualBox utilise le mode de connexion réseau "NAT" (Network Address Translation). Dans ce mode, la machine virtuelle partage l'adresse IP de l'hôte et se connecte au réseau via celui-ci, permettant l'accès à Internet tout en restant inaccessible depuis l'extérieur.
+Par défaut, VirtualBox utilise le mode de connexion réseau "NAT" (Network Address Translation). Dans ce mode, la machine virtuelle partage l'adresse IP de l'hôte et se connecte au réseau via celui-ci, permettant l'accès à Internet tout en restant inaccessible depuis l'extérieur^<<source-2,[2]>>^.
 
 *Quel est le nom du fichier XML contenant la configuration de votre machine ?*
 
@@ -31,7 +31,12 @@ où `{login}` est votre identifiant.
 .Eteignez la machine virtuelle avant de continuer.
 Avant de modifier ce fichier, éteignez la machine virtuelle; sinon, les modifications seront écrasées au prochain redémarrage.
 
-Dans la section `<CPU>` de `sae203.vbox`, modifiez l'attribut `count` à 2.
+Dans la section `<CPU>` de `sae203.vbox`, modifiez l'attribut `count` à 2 : 
+
+[,xml]
+----
+<CPU count="2" hotplug="false">
+----
 
 *** 
 === Questions 2. Installation de base
@@ -154,22 +159,22 @@ d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
 
 // Pour rajouter des sources, rajoutez ça dans votre texte : ^<<source-x,[x]>>^
 
-* [[source-1]]Ceci sera la source 1. +
+* [[source-1]][1] https://www.lemagit.fr/definition/64-bits. +
 
-* [[source-2]]Ceci sera la source 2. +
+* [[source-2]][2] https://www.it-connect.fr/comprendre-les-differents-types-de-reseaux-virtualbox/. +
 
-* [[source-3]]Ceci sera la source 3. +
+* [[source-3]][3] Ceci sera la source 3. +
 
-* [[source-4]]Ceci sera la source 4. +
+* [[source-4]][4] Ceci sera la source 4. +
 
-* [[source-5]]Ceci sera la source 5. +
+* [[source-5]][5] Ceci sera la source 5. +
 
-* [[source-6]]Ceci sera la source 6. +
+* [[source-6]][6] Ceci sera la source 6. +
 
-* [[source-7]]Ceci sera la source 7. +
+* [[source-7]][7] Ceci sera la source 7. +
 
-* [[source-8]]Ceci sera la source 8. +
+* [[source-8]][8] Ceci sera la source 8. +
 
-* [[source-9]]Ceci sera la source 9. +
+* [[source-9]][9] Ceci sera la source 9. +
 
-* [[source-10]]Ceci sera la source 10. +
+* [[source-10]][10] Ceci sera la source 10. +

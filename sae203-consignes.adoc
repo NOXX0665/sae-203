@@ -1,0 +1,108 @@
+= SAÉ 2.03 -- Consignes par ressource
+Jean Carle <jean.carle@univ-lille.fr>
+v3.1, février {localyear}:, Document de consignes générales
+:description: Consigne générale par ressource
+:doctype: article
+:encoding: utf-8
+:lang: fr
+:experimental:
+:icons: font
+:data-uri:
+:toc: left
+:sectnums:
+ifdef::lang[include::attributes-{lang}.adoc[]]
+ifdef::backend-pdf[]
+:pdf-themesdir: themes
+:pdf-theme: sae203
+:pdf-fontsdir: fonts,GEM_FONTS_DIR
+:pdf-page-margin: [15mm, 12mm]
+endif::[]
+
+[abstract]
+.Résumé
+Cette partie donne les consignes générales à suivre pour les différentes ressources impliquées dans cette saé.
+
+[[repartition]]
+== Semainier
+
+[%header, cols="^.^h,.^3,^.^,^.^", stripes=hover]
+|====
+^.^| Semaine ^.^| Étape ^.^| Suivi (1h) | Rendu 
+| 1-S06 | Préparation VM par pré-configuration | ✓ |
+| 2-S07 | Apprentissage balisage léger - base | |
+| 3-S08 | Recherche / étude applications clientes | ✓ | ✓
+| S09 3+h|
+| 4-S10 | ((Gitea)) : installation & utilisation du service | |
+| 5-S11 | Apprentissage balisage léger - style + export | ✓ |
+| 6-S12 | - | | ✓
+|====
+
+// À vous de trouver l'effet de ces 3 caractères (indice, visible uniqument sur la version pdf)
+<<<
+
+[[R212]]
+== R2.12 : Anglais d'entreprise
+(((Consignes, R212, R2.12)))
+
+Vous réaliserez une ((vidéo)) de 10 minutes dans laquelle vous ferez une démonstration en anglais. Vous utiliserez pour cela un logiciel dédié de type OBS afin que vous puissiez apparaître dans la vidéo en même temps que les diapos. Les membres de chaque équipe se partageront équitablement le temps de parole.
+
+====
+.Date de rendu
+Voir avec l'enseignant d'Anglais
+====
+
+
+[[R213]]
+== R2.13 : Communication avec le milieu professionnel
+(((Consignes, R213, R2.13)))
+
+.Consignes générales
+Il vous sera demandé un écrit d'une page environ maximum vulgarisant scientifiquement votre démarche pour un ou une non-spécialiste en expliquant les compétences techniques et les connaissances acquises, en cours d'acquisition ou restant à acquérir. 
+
+.Critères d'évaluation
+Clarté du résumé de la démarche, Concision, clarté des explications des compétences et des connaissances acquises, en cours d'acquisition ou à acquérir. Pénalités pour les erreurs de syntaxe et d'orthographe.
+
+====
+.Date de rendu
+Voir avec l'enseignant de Communication
+====
+
+<<<
+
+[[R204R205]]
+== R2.04 & R2.05 : Communication et fonctionnement bas niveau & services réseaux
+(((Consignes, R204, R2.04, R205, R2.05)))
+
+.Les deux rapports demandés seront rédigés en utilisant au choix 
+* Le format https://daringfireball.net/projects/markdown/[((Markdown))] dans sa version étendue par le logiciel https://pandoc.org/MANUAL.html#pandocs-markdown[((pandoc))]
+* Le format https://docs.asciidoctor.org/[((Asciidoctor))] (version étendue du format AsciiDoc)
+
+[%unbreakable]
+NOTE: L'outil `pandoc` est un outils incontournable permettant la conversion entre différents formats de texte. Il n'est pas nécessaire pour `Asccidoctor` qui possède son propre outil de compilation, mais il est presque indispensable pour `Markdown` dont il étend les possibilités pour l'export vers des formats textuels variés. Pour Markdown, ce sera votre outils de compilation.
+
+Pour l'exemple, une partie du source de ce document, écrit en https://asciidoctor.org/[Asciidoctor], sera rendu disponible. C'est loin d'être parfait mais cela vous donnera un visuel tout à fait acceptable.
+
+====
+[IMPORTANT]
+.Critères d'évaluation
+--
+* Sur le fond : Vos affirmations et choix réalisés devront être justifiés par des explications détaillées et l'ajout de références suffisamment sérieuses pour justifier vos réponses.
+* Sur la forme : Vos rapports devront être structurés et montrer votre maîtrise du format d'édition choisi (Markdown/pandoc ou asciidoctor) en y insérant au moins :
+** à minima du *gras*, de l'_italique_, de la #surbrillance#, et (en version finale du rapport) tout autre mise en forme possible des mots selon les possibilités standards ou les extensions à activer (voir la documentation de Pandoc)
+** l'insertion de `code sources`
+** l'insertion de liens cliquables, internes à votre document (on parle parfois de référence croisée) et externes
+** une image dont vous modifierez la taille dans le document, 
+** au moins un tableau complexe, 
+** des listes de plusieurs types différents, incluant au moins une fois des sous-listes (voire des sous-sous-listes)
+** un sommaire automatique (sur la version finale)
+** l'utilisation de template (au moins css) personnalisée sur la version finale html.
+** La gestion multi-fichiers : un rapport final à partir de la fusion de plusieurs fichiers sources
+** …
+--
+====
+
+// Indexe uniquement pour la version pdf
+ifdef::backend-pdf[]
+[index]
+= Index
+endif::[]

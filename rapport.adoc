@@ -3,7 +3,12 @@ Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
 :toc:
 :toc-title: Table des matières
 
-== Questions semaine 1
+== Installation automatisée de Debian
+
+
+
+
+== Questions semaine 1 
 
 === Questions 1 : Configuration matérielle dans VirtualBox
 
@@ -102,6 +107,7 @@ Le Projet Debian est une organisation communautaire développant le système d�
 
 *Quelles sont les durées de prise en charge (support) des versions Debian ? Pendant combien de temps les mises à jour de sécurité sont-elles assurées ?*
 
+[%header, stripes=hover]
 .Durées de prise en charge des verions Debian
 |===
 | Durée de support | Mises à jour de sécurité
@@ -152,6 +158,30 @@ Toujours dans `preseed-fr.cfg`, ajoutez :
 ----
 d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
 ----
+
+== Questions semaine 3
+
+//Mettre les réponses aux questions de la semaine 3
+=== Question 1.Préliminaire
+
+*Qu’est-ce que le logiciel gitk ? Comment se lance-t-il ?*
+
+gitk est une interface graphique pour visualiser l’historique des commits d’un dépôt Git. Il permet de visualiser les branches, les commits et les relations entre eux sous forme de graphes.
+
+Pour l'ouvrir il suffit de taper la commande `gitk` dans un terminal.
+
+*Qu’est-ce que le logiciel git-gui ? Comment se lance-t-il ?*
+
+git-gui est une autre interface graphique pour Git, mais par rapport a gitk elle permet de gérer les actions courantes de Git comme ajouter des fichiers, créer des commits, fusionner des branches, etc.
+
+Pour l'ouvrir il suffit de taper la commande `git gui` dans un terminal.
+
+***
+
+=== Question 2.Comparons
+
+*Pourquoi avez-vous choisi ce logiciel ?*
+
 
 [bibliography]
 == Sources

@@ -28,22 +28,22 @@ Le fichier s'appelle `sae203.vbox` et se trouve dans le dossier de la machine vi
 /usr/local/virtual_machine/infoetu/{login}/vbox_vms/sae203/
 ----
 
-où `{login}` est votre identifiant.
+où `+{login}+` est votre identifiant.
 
-*Sauriez-vous modifier directement ce fichier de configuration pour mettre 2 processeurs à votre machine ?*
+*Sauriez-vous modifier directement ce fichier de configuration pour mettre deux processeurs à votre machine ?*
 
 [IMPORTANT]
 .Eteignez la machine virtuelle avant de continuer.
-Avant de modifier ce fichier, éteignez la machine virtuelle; sinon, les modifications seront écrasées au prochain redémarrage.
+Avant de modifier ce fichier, éteignez la machine virtuelle sinon, les modifications seront écrasées au prochain redémarrage.
 
-Dans la section `<CPU>` de `sae203.vbox`, modifiez l'attribut `count` à 2 : 
+Dans la section `<CPU>` de `sae203.vbox`, modifiez l'attribut `count` à 2 :
 
 [,xml]
 ----
 <CPU count="2" hotplug="false">
 ----
 
-*** 
+'''
 === Questions 2. Installation de base
 
 *Qu’est-ce qu’un fichier ISO bootable ?*
@@ -67,10 +67,10 @@ Un serveur SSH permet un accès à distance sécurisé au système, grâce à un
 
 Un serveur mandataire (proxy) est un intermédiaire entre client et serveur, servant à filtrer et sécuriser les requêtes^<<source-7,[7]>>^.
 
-*** 
+'''
 === Question(s) 3 : sudo
 
-*Comment peux-ton savoir à quels groupes appartient l’utilisateur user ?*
+*Comment peut-on savoir à quels groupes appartient l’utilisateur "user" ?*
 
 Utilisez la commande^<<source-8,[8]>>^:
 [,bash]
@@ -78,7 +78,7 @@ Utilisez la commande^<<source-8,[8]>>^:
 groups "user"
 ----
 
-*** 
+'''
 === Questions 4.1 : Suppléments invités
 
 *Quel est la version du noyau Linux utilisé par votre VM ? Justifiez votre réponse.*
@@ -90,15 +90,15 @@ uname -r
 ----
 Ce qui donne par exemple `6.1.0-31-amd64`.
 
-*À quoi servent les suppléments invités ? Donnez 2 principales raisons de les installer.*
+*À quoi servent les suppléments invités ? Donnez deux principales raisons de les installer.*
 
-Ils améliorent les performances graphiques, le partage des dossiers et périphériques entre l'hôte et la VM (redimensionnement dynamique de la fenêtre, gestion du clipboard, etc.).
+Ils améliorent les performances graphiques, le partage des dossiers et périphériques entre l'hôte et la VM (redimensionnement dynamique de la fenêtre, gestion du clipboard, etc).
 
 *À quoi sert la commande mount (dans notre cas et en général) ?*
 
 La commande mount sert à monter un périphérique de stockage ou système de fichiers sur un répertoire spécifique. Ici, elle monte le CD des suppléments invités sur un répertoire du système.
 
-*** 
+'''
 === Questions 4.2 : Quelques Questions
 
 *Qu’est-ce que le Projet Debian ? D’où vient le nom Debian ?*
@@ -108,7 +108,7 @@ Le Projet Debian est une organisation communautaire développant le système d�
 *Quelles sont les durées de prise en charge (support) des versions Debian ? Pendant combien de temps les mises à jour de sécurité sont-elles assurées ?*
 
 [%header, stripes=hover]
-.Durées de prise en charge des verions Debian
+.Durées de prise en charge des versions Debian
 |===
 | Durée de support | Mises à jour de sécurité
 
@@ -133,9 +133,9 @@ Debian maintient au moins trois versions :
 
 Les noms de code proviennent des personnages du film "Toy Story" de Pixar.
 - Première version (Debian 1.1) : Nom de code Buzz, annoncée le 16 juin 1996.
-- Dernière version annoncée (Debian 13) : Nom de code Trixie, annoncée le 12 août 2023.
+- Dernière version (Debian 13) : Nom de code Trixie, annoncée le 12 août 2023.
 
-*** 
+'''
 === Question(s) 5. Ajustement de la pré-configuration
 
 *Ajouter le droit d'utiliser sudo à l'utilisateur standard*
@@ -166,17 +166,17 @@ d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
 
 *Qu’est-ce que le logiciel gitk ? Comment se lance-t-il ?*
 
-gitk est une interface graphique pour visualiser l’historique des commits d’un dépôt Git. Il permet de visualiser les branches, les commits et les relations entre eux sous forme de graphes.
+Gitk est une interface graphique pour visualiser l’historique des commits d’un dépôt Git. Il permet de visualiser les branches, les commits et les relations entre eux sous forme de graphes.
 
-Pour l'ouvrir il suffit de taper la commande `gitk` dans un terminal.
+Pour l'ouvrir, il suffit de taper la commande `gitk` dans un terminal.
 
 *Qu’est-ce que le logiciel git-gui ? Comment se lance-t-il ?*
 
-git-gui est une autre interface graphique pour Git, mais par rapport a gitk elle permet de gérer les actions courantes de Git comme ajouter des fichiers, créer des commits, fusionner des branches, etc.
+Git-gui est une autre interface graphique pour Git, mais par rapport à gitk, elle permet de gérer les actions courantes de Git comme ajouter des fichiers, créer des commits, fusionner des branches, etc.
 
-Pour l'ouvrir il suffit de taper la commande `git gui` dans un terminal.
+Pour l'ouvrir, il suffit de taper la commande `git gui` dans un terminal.
 
-***
+'''
 
 === Question 2.Comparons
 

@@ -60,14 +60,15 @@ Un serveur SSH permet un accès à distance sécurisé au système, grâce à un
 
 *Qu’est-ce qu’un serveur mandataire ?*
 
-Un serveur mandataire (proxy) est un intermédiaire entre client et serveur, servant à filtrer et sécuriser les requêtes.
+Un serveur mandataire (proxy) est un intermédiaire entre client et serveur, servant à filtrer et sécuriser les requêtes^<<source-7,[7]>>^.
 
 *** 
 === Question(s) 3 : sudo
 
 *Comment peux-ton savoir à quels groupes appartient l’utilisateur user ?*
 
-Utilisez la commande:
+Utilisez la commande^<<source-8,[8]>>^:
+[,bash]
 ----
 groups "user"
 ----
@@ -78,6 +79,7 @@ groups "user"
 *Quel est la version du noyau Linux utilisé par votre VM ? Justifiez votre réponse.*
 
 Exécutez la commande:
+[,bash]
 ----
 uname -r
 ----
@@ -171,9 +173,9 @@ d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
 
 * [[source-6]][6] https://fr.siteground.com/kb/quest-ce-que-ssh-et-comment-puis-je-lutiliser/ +
 
-* [[source-7]][7] Ceci sera la source 7. +
+* [[source-7]][7] https://www.techno-science.net/definition/3812.html +
 
-* [[source-8]][8] Ceci sera la source 8. +
+* [[source-8]][8] https://docs.redhat.com/fr/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/listing-the-primary-and-supplementary-user-groups_editing-user-groups-using-the-command-line#listing-the-primary-and-supplementary-user-groups_editing-user-groups-using-the-command-line +
 
 * [[source-9]][9] Ceci sera la source 9. +
 

@@ -1,4 +1,4 @@
-= Rapport SAE 2.03
+c= Rapport SAE 2.03
 Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
 :toc:
 :toc-title: Table des matières
@@ -113,7 +113,7 @@ Ce qui donne par exemple `6.1.0-31-amd64`.
 
 *À quoi servent les suppléments invités ? Donnez deux principales raisons de les installer.*
 
-Ils améliorent les performances graphiques, le partage des dossiers et périphériques entre l'hôte et la VM (redimensionnement dynamique de la fenêtre, gestion du clipboard, etc).
+Ils améliorent les performances graphiques, le partage des dossiers et périphériques entre l'hôte et la VM (redimensionnement dynamique de la fenêtre, gestion du clipboard, etc)^<<source-9,[9]>>^.
 
 *À quoi sert la commande mount (dans notre cas et en général) ?*
 
@@ -124,17 +124,17 @@ La commande mount sert à monter un périphérique de stockage ou système de fi
 
 *Qu’est-ce que le Projet Debian ? D’où vient le nom Debian ?*
 
-Le Projet Debian est une organisation communautaire développant le système d’exploitation Debian, composé de logiciels libres. Le nom "Debian" provient de la combinaison du prénom de son fondateur, Ian Murdock, et de celui de sa compagne de l'époque, Debra Lynn.
+Le Projet Debian est une organisation communautaire développant le système d’exploitation Debian, composé de logiciels libres. Le nom "Debian" provient de la combinaison du prénom de son fondateur, Ian Murdock, et de celui de sa compagne de l'époque, Debra Lynn^<<source-10,[10]>>^.
 
 *Quelles sont les durées de prise en charge (support) des versions Debian ? Pendant combien de temps les mises à jour de sécurité sont-elles assurées ?*
 
 [%header, stripes=hover]
-.Durées de prise en charge des versions Debian
+.Durées de prise en charge des versions Debian^<<source-11,[11]>>^
 |===
 | Durée de support | Mises à jour de sécurité
 
 | Durée minimale
-| 1 an après la sorte de la version suivante
+| 1 an après la sortie de la version suivante
 
 | Support long terme (LTS)
 | 5 ans depuis la date de sortie initiale
@@ -154,8 +154,9 @@ Debian maintient au moins trois versions :
 *D’où viennent les noms de code des distributions majeures Debian ?*
 
 Les noms de code proviennent des personnages du film "Toy Story" de Pixar.
-- Première version (Debian 1.1) : Nom de code Buzz, annoncée le 16 juin 1996.
-- Dernière version (Debian 13) : Nom de code Trixie, annoncée le 12 août 2023.
+
+* Première version (Debian 1.1) : Nom de code Buzz, annoncée le 16 juin 1996.
+* Dernière version (Debian 13) : Nom de code Trixie, annoncée le 12 août 2023.
 
 '''
 === Question(s) 5. Ajustement de la pré-configuration
@@ -206,6 +207,58 @@ Pour l'ouvrir, il suffit de taper la commande `git gui` dans un terminal.
 
 Nous avons choisi GitHub Desktop pour sa simplicité d'utilisation et sa gestion intuitive des dépôts Git. De plus, il est entièrement gratuit, contrairement à GitKraken qui, bien que plus complet, nécessite une licence payante pour certaines fonctionnalités, notamment l'utilisation avec des dépôts privés.
 
+*Comment l’avez vous installé ?*
+
+Pour l'installer, il faut allez sur le github et simplement suivre ce qui est écrit
+----
+https://gist.github.com/berkorbay/6feda478a00b0432d13f1fc0a50467f1
+----
+
+*Comparer-le aux outils inclus avec git (et installé précédemment) ainsi qu’avec ce qui serait fait en ligne de commande pure : fonctionnalités avantages, inconvénients...*
+
+. Gitk et Git-gui :
+
+Gitk est principalement utilisé pour visualiser l'historique des commits de manière graphique. Il permet de naviguer dans les branches et les commits mais reste assez basique dans son interface.
+Git-gui, quant à lui, propose une interface pour effectuer les actions Git courantes comme le commit, le push, et la gestion des branches. Toutefois, il manque d'une gestion intuitive des conflits ou d'outils de visualisation avancée comme dans GitHub Desktop.
+
+.. Avantages :
+
+Ces outils sont installés avec Git et n'ont pas de coûts supplémentaires.
+Git-gui reste un bon choix pour les actions de base.
+
+.. Inconvénients :
+
+L'interface de Gitk et Git-gui peut être moins claire, en particulier pour les utilisateurs débutants.
+Moins de fonctionnalités avancées et d'intégration avec des services comme GitHub.
+
+. GitHub Desktop :
+
+.. Avantages :
+
+Interface très intuitive et facile à utiliser pour les débutants.
+Intégration complète avec GitHub (bien que ce ne soit pas limité à GitHub, il fonctionne également avec des dépôts Git locaux).
+Gestion des branches, commits, et push/pull très fluides.
+Prise en charge des conflits de fusion de manière plus visuelle et conviviale.
+Pas de nécessité d'utiliser la ligne de commande pour la plupart des opérations courantes.
+
+.. Inconvénients :
+
+Moins de fonctionnalités avancées comparé à GitKraken (comme la gestion de projets plus complexes ou l’intégration avec plusieurs services).
+Ne convient pas bien aux utilisateurs avancés qui préfèrent une ligne de commande complète et plus personnalisable.
+
+. Ligne de commande pure :
+
+.. Avantages :
+        
+Offre une flexibilité totale et permet de réaliser toutes les opérations possibles avec Git.
+L'utilisation de la ligne de commande permet une meilleure compréhension du fonctionnement interne de Git et est souvent plus rapide pour les utilisateurs expérimentés.
+
+.. Inconvénients :
+Peut être complexe et déroutante pour les débutants.
+Prise en main difficile, surtout lorsqu'il s'agit de comprendre l'historique des commits ou de résoudre des conflits de manière visuelle.
+
+
+En conclusion, GitHub Desktop offre une solution simple et accessible pour les utilisateurs qui privilégient une interface graphique sans les difficulté des lignes de commande ou des outils plus complexe comme GitKraken, même qu'il ne soit pas aussi complet que GitKraken.
 
 [bibliography]
 == Sources
@@ -231,6 +284,8 @@ Nous avons choisi GitHub Desktop pour sa simplicité d'utilisation et sa gestion
 
 * [[source-8]][8] https://docs.redhat.com/fr/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/listing-the-primary-and-supplementary-user-groups_editing-user-groups-using-the-command-line#listing-the-primary-and-supplementary-user-groups_editing-user-groups-using-the-command-line +
 
-* [[source-9]][9] Ceci sera la source 9. +
+* [[source-9]][9] https://www.virtualbox.org/manual/ch04.html#guestadd-intro +
 
-* [[source-10]][10] Ceci sera la source 10. +
+* [[source-10]][10] https://www.debian.org/intro/about.fr.html +
+
+* [[source-11]][11] https://www.debian.org/releases/

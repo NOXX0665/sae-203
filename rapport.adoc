@@ -1,4 +1,4 @@
-c= Rapport SAE 2.03
+= Rapport SAE 2.03
 Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
 :toc:
 :toc-title: Table des matières
@@ -124,12 +124,12 @@ La commande mount sert à monter un périphérique de stockage ou système de fi
 
 *Qu’est-ce que le Projet Debian ? D’où vient le nom Debian ?*
 
-Le Projet Debian est une organisation communautaire développant le système d’exploitation Debian, composé de logiciels libres. Le nom "Debian" provient de la combinaison du prénom de son fondateur, Ian Murdock, et de celui de sa compagne de l'époque, Debra Lynn^<<source-10,[10]>>^.
+Le Projet Debian est une organisation communautaire développant le système d’exploitation Debian, composé de logiciels libres. Le nom "Debian" provient de la combinaison du prénom de son fondateur, Ian Murdock, et de celui de sa compagne de l'époque, Debra Lynn. ^<<source-10,[10]>>^.
 
 *Quelles sont les durées de prise en charge (support) des versions Debian ? Pendant combien de temps les mises à jour de sécurité sont-elles assurées ?*
 
 [%header, stripes=hover]
-.Durées de prise en charge des versions Debian^<<source-11,[11]>>^
+.Durées de prise en charge des versions Debian ^<<source-11,[11]>>^
 |===
 | Durée de support | Mises à jour de sécurité
 
@@ -164,6 +164,7 @@ Les noms de code proviennent des personnages du film "Toy Story" de Pixar.
 *Ajouter le droit d'utiliser sudo à l'utilisateur standard*
 
 Dans le fichier `preseed-fr.cfg`, ajoutez :
+[.text-center, source]
 ----
 d-i passwd/user-default-groups string audio cdrom video sudo
 ----
@@ -171,6 +172,7 @@ d-i passwd/user-default-groups string audio cdrom video sudo
 *Installer l’environnement MATE*
 
 Toujours dans `preseed-fr.cfg`, ajoutez :
+[.text-center, source]
 ----
 tasksel tasksel/first multiselect standard ssh-server mate-desktop
 ----
@@ -178,6 +180,7 @@ tasksel tasksel/first multiselect standard ssh-server mate-desktop
 *Ajouter les paquets suivants : sudo, git, sqlite3, curl, bash-completion, neofetch*
 
 Toujours dans `preseed-fr.cfg`, ajoutez :
+[.text-center, source]
 ----
 d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
 ----
@@ -210,6 +213,7 @@ Nous avons choisi GitHub Desktop pour sa simplicité d'utilisation et sa gestion
 *Comment l’avez vous installé ?*
 
 Pour l'installer, il faut allez sur le github et simplement suivre ce qui est écrit
+[.text-center]
 ----
 https://gist.github.com/berkorbay/6feda478a00b0432d13f1fc0a50467f1
 ----
@@ -232,6 +236,10 @@ L'interface de Gitk et Git-gui peut être moins claire, en particulier pour les 
 Moins de fonctionnalités avancées et d'intégration avec des services comme GitHub.
 
 . GitHub Desktop :
+
+[.text-center]
+.interface de GitHub Desktop
+image::img/screenshot-interface-github-desktop.png[Exemple de l'interface de Mate, width=75%, border-radius=20px]
 
 .. Avantages :
 
@@ -288,4 +296,4 @@ En conclusion, GitHub Desktop offre une solution simple et accessible pour les u
 
 * [[source-10]][10] https://www.debian.org/intro/about.fr.html +
 
-* [[source-11]][11] https://www.debian.org/releases/
+* [[source-11]][11] https://www.debian.org/releases/[Get Debian]!

@@ -1,0 +1,2806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.18">
+<meta name="author" content="Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025">
+<title>Rapport SAE 2.03</title>
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #fff;
+  color: rgb(0 0 0 / 0.8);
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Serif", "DejaVu Serif", serif;
+  font-size: inherit;
+  line-height: 1;
+  position: relative;
+  cursor: auto;
+  tab-size: 4;
+  word-wrap: anywhere;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background: none;
+  color: #2156a5;
+  text-decoration: underline;
+  line-height: inherit;
+}
+
+a:active,
+a:hover {
+  cursor: pointer;
+  outline: 0;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:focus {
+  color: #1d4b8f;
+}
+
+abbr {
+  font-size: 0.9em;
+}
+
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #dddddf;
+  text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+strong strong {
+  font-weight: 400;
+}
+
+code,
+kbd,
+pre {
+  font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+  font-size: 1em;
+}
+
+code {
+  font-weight: 400;
+  color: rgb(0 0 0 / 0.9);
+}
+
+pre {
+  color: rgb(0 0 0 / 0.9);
+  line-height: 1.45;
+  text-rendering: optimizeSpeed;
+  white-space: pre-wrap;
+}
+
+dfn {
+  font-style: italic;
+}
+
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+em em {
+  font-style: normal;
+}
+
+hr {
+  border: solid #dddddf;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 0;
+  margin: 1.25em 0 1.1875em;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+  font-size: 60%;
+  line-height: inherit;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img,
+object[type^="image/"],
+svg {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+img {
+  border: 0;
+  border-radius:10px;
+  -ms-interpolation-mode: bicubic;
+}
+
+object {
+  max-width: 100%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.text-left,
+div.text-left > * {
+  text-align: left !important;
+}
+
+.text-right,
+div.text-right > * {
+  text-align: right !important;
+}
+
+.text-center,
+div.text-center > * {
+  text-align: center !important;
+}
+
+.text-justify,
+div.text-justify > * {
+  text-align: justify !important;
+}
+
+.hide {
+  display: none;
+}
+
+.subheader,
+.admonitionblock td.content > .title,
+.audioblock > .title,
+.exampleblock > .title,
+.imageblock > .title,
+.listingblock > .title,
+.literalblock > .title,
+.stemblock > .title,
+.openblock > .title,
+.paragraph > .title,
+.quoteblock > .title,
+table.tableblock > .title,
+.verseblock > .title,
+.videoblock > .title,
+.dlist > .title,
+.olist > .title,
+.ulist > .title,
+.qlist > .title,
+.hdlist > .title {
+  line-height: 1.45;
+  color: #7a2518;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+p aside {
+  font-size: 0.875em;
+  line-height: 1.35;
+  font-style: italic;
+}
+
+h1,
+h2,
+h3,
+#toctitle,
+.sidebarblock > .content > .title,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", "DejaVu Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #ba3925;
+  text-rendering: optimizeLegibility;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  word-spacing: -0.05em;
+}
+
+h1 small,
+h2 small,
+h3 small,
+#toctitle small,
+.sidebarblock > .content > .title small,
+h4 small,
+h5 small,
+h6 small {
+  color: #e99b8f;
+  line-height: 0;
+}
+
+h1 {
+  font-size: 2.125em;
+}
+
+h2 {
+  font-size: 1.6875em;
+}
+
+h3,
+#toctitle,
+.sidebarblock > .content > .title {
+  font-size: 1.375em;
+}
+
+h4,
+h5 {
+  font-size: 1.125em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+ul,
+ol,
+dl {
+  line-height: 1.6;
+  margin-bottom: 1.25em;
+  list-style-position: outside;
+  font-family: inherit;
+}
+
+ul,
+ol {
+  margin-left: 1.5em;
+}
+
+ul li ul,
+ul li ol {
+  margin-left: 1.25em;
+  margin-bottom: 0;
+}
+
+ul.circle {
+  list-style-type: circle;
+}
+
+ul.disc {
+  list-style-type: disc;
+}
+
+ul.square {
+  list-style-type: square;
+}
+
+ul.circle ul:not([class]),
+ul.disc ul:not([class]),
+ul.square ul:not([class]) {
+  list-style: inherit;
+}
+
+ol li ul,
+ol li ol {
+  margin-left: 1.25em;
+  margin-bottom: 0;
+}
+
+dl dt {
+  margin-bottom: 0.3125em;
+  font-weight: bold;
+}
+
+dl dd {
+  margin-bottom: 1.25em;
+  margin-left: 1.125em;
+}
+
+blockquote {
+  margin: 0 0 1.25em;
+  padding: 0.5625em 1.25em 0 1.1875em;
+  border-left: 1px solid #ddd;
+}
+
+blockquote,
+blockquote p {
+  line-height: 1.6;
+  color: rgb(0 0 0 / 0.85);
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.75em;
+  }
+
+  h2 {
+    font-size: 2.3125em;
+  }
+
+  h3,
+  #toctitle,
+  .sidebarblock > .content > .title {
+    font-size: 1.6875em;
+  }
+
+  h4 {
+    font-size: 1.4375em;
+  }
+}
+
+table {
+  background: #fff;
+  border: 1px solid #dedede;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1.25em;
+  word-wrap: normal;
+}
+
+table thead,
+table tfoot {
+  background: #f7f8f7;
+}
+
+table thead tr th,
+table thead tr td,
+table tfoot tr th,
+table tfoot tr td {
+  padding: 0.5em 0.625em 0.625em;
+  font-size: inherit;
+  color: rgb(0 0 0 / 0.8);
+  text-align: left;
+}
+
+table tr th,
+table tr td {
+  padding: 0.5625em 0.625em;
+  font-size: inherit;
+  color: rgb(0 0 0 / 0.8);
+}
+
+table tr.even,
+table tr.alt {
+  background: #f8f8f7;
+}
+
+table thead tr th,
+table tfoot tr th,
+table tbody tr td,
+table tr td,
+table tfoot tr td {
+  line-height: 1.6;
+}
+
+h1 strong,
+h2 strong,
+h3 strong,
+#toctitle strong,
+.sidebarblock > .content > .title strong,
+h4 strong,
+h5 strong,
+h6 strong {
+  font-weight: 400;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stretch {
+  width: 100%;
+}
+
+.clearfix::before,
+.clearfix::after,
+.float-group::before,
+.float-group::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after,
+.float-group::after {
+  clear: both;
+}
+
+:not(pre).nobreak {
+  word-wrap: normal;
+}
+
+:not(pre).nowrap {
+  white-space: nowrap;
+}
+
+:not(pre).pre-wrap {
+  white-space: pre-wrap;
+}
+
+:not(pre):not([class^=L]) > code {
+  font-size: 0.9375em;
+  font-style: normal !important;
+  letter-spacing: 0;
+  padding: 0.1em 0.5ex;
+  word-spacing: -0.15em;
+  background: #f7f7f8;
+  border-radius: 4px;
+  line-height: 1.45;
+  text-rendering: optimizeSpeed;
+}
+
+pre code,
+pre pre {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+pre.nowrap,
+pre.nowrap pre {
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.keyseq {
+  color: rgb(51 51 51 / 0.8);
+}
+
+kbd {
+  display: inline-block;
+  color: rgb(0 0 0 / 0.8);
+  font-size: 0.65em;
+  line-height: 1.45;
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.2), 0 0 0 0.1em #fff inset;
+  margin: 0 0.15em;
+  padding: 0.2em 0.5em;
+  vertical-align: middle;
+  position: relative;
+  top: -0.1em;
+  white-space: nowrap;
+}
+
+.keyseq kbd:first-child {
+  margin-left: 0;
+}
+
+.keyseq kbd:last-child {
+  margin-right: 0;
+}
+
+.menuseq,
+.menuref {
+  color: #000;
+}
+
+.menuseq b:not(.caret),
+.menuref {
+  font-weight: inherit;
+}
+
+.menuseq {
+  word-spacing: -0.02em;
+}
+
+.menuseq b.caret {
+  font-size: 1.25em;
+  line-height: 0.8;
+}
+
+.menuseq i.caret {
+  font-weight: bold;
+  text-align: center;
+  width: 0.45em;
+}
+
+b.button::before,
+b.button::after {
+  position: relative;
+  top: -1px;
+  font-weight: 400;
+}
+
+b.button::before {
+  content: "[";
+  padding: 0 3px 0 2px;
+}
+
+b.button::after {
+  content: "]";
+  padding: 0 2px 0 3px;
+}
+
+p a > code:hover {
+  color: rgb(0 0 0 / 0.9);
+}
+
+body > div[id] {
+  margin: 0 auto;
+  max-width: 62.5em;
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+}
+
+body > div[id]::before,
+body > div[id]::after,
+#content #footnotes::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#content {
+  margin-top: 1.25em;
+  margin-bottom: 0.625em;
+}
+
+#content::before {
+  content: none;
+}
+
+#header > h1:first-child {
+  color: rgb(0 0 0 / 0.85);
+  margin-top: 2.25rem;
+  margin-bottom: 0;
+}
+
+#header > h1:first-child + #toc {
+  margin-top: 8px;
+  border-top: 1px solid #dddddf;
+}
+
+#header > h1:only-child {
+  border-bottom: 1px solid #dddddf;
+  padding-bottom: 8px;
+}
+
+#header .details {
+  border-bottom: 1px solid #dddddf;
+  line-height: 1.45;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  padding-left: 0.25em;
+  color: rgb(0 0 0 / 0.6);
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#header .details span:first-child {
+  margin-left: -0.125em;
+}
+
+#header .details span.email a {
+  color: rgb(0 0 0 / 0.85);
+}
+
+#header .details br {
+  display: none;
+}
+
+#header .details br + span::before {
+  content: "\00a0\2013\00a0";
+}
+
+#header .details br + span.author::before {
+  content: "\00a0\22c5\00a0";
+  color: rgb(0 0 0 / 0.85);
+}
+
+#header .details br + span#revremark::before {
+  content: "\00a0|\00a0";
+}
+
+#header #revnumber {
+  text-transform: capitalize;
+}
+
+#header #revnumber::after {
+  content: "\00a0";
+}
+
+#content > h1:first-child:not([class]) {
+  color: rgb(0 0 0 / 0.85);
+  border-bottom: 1px solid #dddddf;
+  padding-bottom: 8px;
+  margin-top: 0;
+  padding-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+#toc {
+  border-bottom: 1px solid #e7e7e9;
+  padding-bottom: 0.5em;
+}
+
+#toc > ul {
+  margin-left: 0.125em;
+}
+
+#toc ul.sectlevel0 > li > a {
+  font-style: italic;
+}
+
+#toc ul.sectlevel0 ul.sectlevel1 {
+  margin: 0.5em 0;
+}
+
+#toc ul {
+  font-family: "Open Sans", "DejaVu Sans", sans-serif;
+  list-style-type: none;
+}
+
+#toc li {
+  line-height: 1.3334;
+  margin-top: 0.3334em;
+}
+
+#toc a {
+  text-decoration: none;
+}
+
+#toc a:active {
+  text-decoration: underline;
+}
+
+#toctitle {
+  color: #7a2518;
+  font-size: 1.2em;
+}
+
+@media screen and (min-width: 768px) {
+  #toctitle {
+    font-size: 1.375em;
+  }
+
+  body.toc2 {
+    padding-left: 15em;
+    padding-right: 0;
+  }
+
+  body.toc2 #header > h1:nth-last-child(2) {
+    border-bottom: 1px solid #dddddf;
+    padding-bottom: 8px;
+  }
+
+  #toc.toc2 {
+    margin-top: 0 !important;
+    background: #f8f8f7;
+    position: fixed;
+    width: 15em;
+    left: 0;
+    top: 0;
+    border-right: 1px solid #e7e7e9;
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
+    z-index: 1000;
+    padding: 1.25em 1em;
+    height: 100%;
+    overflow: auto;
+  }
+
+  #toc.toc2 #toctitle {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2em;
+  }
+
+  #toc.toc2 > ul {
+    font-size: 0.9em;
+    margin-bottom: 0;
+  }
+
+  #toc.toc2 ul ul {
+    margin-left: 0;
+    padding-left: 1em;
+  }
+
+  #toc.toc2 ul.sectlevel0 ul.sectlevel1 {
+    padding-left: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  body.toc2.toc-right {
+    padding-left: 0;
+    padding-right: 15em;
+  }
+
+  body.toc2.toc-right #toc.toc2 {
+    border-right-width: 0;
+    border-left: 1px solid #e7e7e9;
+    left: auto;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body.toc2 {
+    padding-left: 20em;
+    padding-right: 0;
+  }
+
+  #toc.toc2 {
+    width: 20em;
+  }
+
+  #toc.toc2 #toctitle {
+    font-size: 1.375em;
+  }
+
+  #toc.toc2 > ul {
+    font-size: 0.95em;
+  }
+
+  #toc.toc2 ul ul {
+    padding-left: 1.25em;
+  }
+
+  body.toc2.toc-right {
+    padding-left: 0;
+    padding-right: 20em;
+  }
+}
+
+#content #toc {
+  border: 1px solid #e0e0dc;
+  margin-bottom: 1.25em;
+  padding: 1.25em;
+  background: #f8f8f7;
+  border-radius: 4px;
+}
+
+#footer {
+  max-width: none;
+  background: rgb(0 0 0 / 0.8);
+  padding: 1.25em;
+}
+
+#footer-text {
+  color: rgb(255 255 255 / 0.8);
+  line-height: 1.44;
+}
+
+.sect1 {
+  padding-bottom: 0.625em;
+}
+
+@media screen and (min-width: 768px) {
+  #content {
+    margin-bottom: 1.25em;
+  }
+
+  .sect1 {
+    padding-bottom: 1.25em;
+  }
+}
+
+.sect1:last-child {
+  padding-bottom: 0;
+}
+
+.sect1 + .sect1 {
+  border-top: 1px solid #e7e7e9;
+}
+
+#content h1 > a.anchor,
+h2 > a.anchor,
+h3 > a.anchor,
+#toctitle > a.anchor,
+.sidebarblock > .content > .title > a.anchor,
+h4 > a.anchor,
+h5 > a.anchor,
+h6 > a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
+
+#content h1 > a.anchor::before,
+h2 > a.anchor::before,
+h3 > a.anchor::before,
+#toctitle > a.anchor::before,
+.sidebarblock > .content > .title > a.anchor::before,
+h4 > a.anchor::before,
+h5 > a.anchor::before,
+h6 > a.anchor::before {
+  content: "\00A7";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
+
+#content h1:hover > a.anchor,
+#content h1 > a.anchor:hover,
+h2:hover > a.anchor,
+h2 > a.anchor:hover,
+h3:hover > a.anchor,
+#toctitle:hover > a.anchor,
+.sidebarblock > .content > .title:hover > a.anchor,
+h3 > a.anchor:hover,
+#toctitle > a.anchor:hover,
+.sidebarblock > .content > .title > a.anchor:hover,
+h4:hover > a.anchor,
+h4 > a.anchor:hover,
+h5:hover > a.anchor,
+h5 > a.anchor:hover,
+h6:hover > a.anchor,
+h6 > a.anchor:hover {
+  visibility: visible;
+}
+
+#content h1 > a.link,
+h2 > a.link,
+h3 > a.link,
+#toctitle > a.link,
+.sidebarblock > .content > .title > a.link,
+h4 > a.link,
+h5 > a.link,
+h6 > a.link {
+  color: #ba3925;
+  text-decoration: none;
+}
+
+#content h1 > a.link:hover,
+h2 > a.link:hover,
+h3 > a.link:hover,
+#toctitle > a.link:hover,
+.sidebarblock > .content > .title > a.link:hover,
+h4 > a.link:hover,
+h5 > a.link:hover,
+h6 > a.link:hover {
+  color: #a53221;
+}
+
+details,
+.audioblock,
+.imageblock,
+.literalblock,
+.listingblock,
+.stemblock,
+.videoblock {
+  margin-bottom: 1.25em;
+}
+
+details {
+  margin-left: 1.25rem;
+}
+
+details > summary {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  line-height: 1.6;
+  margin-bottom: 0.625rem;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::before {
+  content: "";
+  border: solid transparent;
+  border-left-color: currentColor;
+  border-width: 0.3em 0 0.3em 0.5em;
+  position: absolute;
+  top: 0.5em;
+  left: -1.25rem;
+  transform: translateX(15%);
+}
+
+details[open] > summary::before {
+  border: solid transparent;
+  border-top-color: currentColor;
+  border-width: 0.5em 0.3em 0;
+  transform: translateY(15%);
+}
+
+details > summary::after {
+  content: "";
+  width: 1.25rem;
+  height: 1em;
+  position: absolute;
+  top: 0.3em;
+  left: -1.25rem;
+}
+
+.admonitionblock td.content > .title,
+.audioblock > .title,
+.exampleblock > .title,
+.imageblock > .title,
+.listingblock > .title,
+.literalblock > .title,
+.stemblock > .title,
+.openblock > .title,
+.paragraph > .title,
+.quoteblock > .title,
+table.tableblock > .title,
+.verseblock > .title,
+.videoblock > .title,
+.dlist > .title,
+.olist > .title,
+.ulist > .title,
+.qlist > .title,
+.hdlist > .title {
+  text-rendering: optimizeLegibility;
+  text-align: left;
+  font-family: "Noto Serif", "DejaVu Serif", serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+table.tableblock.fit-content > caption.title {
+  white-space: nowrap;
+  width: 0;
+}
+
+.paragraph.lead > p,
+#preamble > .sectionbody > [class=paragraph]:first-of-type p {
+  font-size: 1.21875em;
+  line-height: 1.6;
+  color: rgb(0 0 0 / 0.85);
+}
+
+.admonitionblock > table {
+  border-collapse: separate;
+  border: 0;
+  background: none;
+  width: 100%;
+}
+
+.admonitionblock > table td.icon {
+  text-align: center;
+  width: 80px;
+}
+
+.admonitionblock > table td.icon img {
+  max-width: none;
+}
+
+.admonitionblock > table td.icon .title {
+  font-weight: bold;
+  font-family: "Open Sans", "DejaVu Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.admonitionblock > table td.content {
+  padding-left: 1.125em;
+  padding-right: 1.25em;
+  border-left: 1px solid #dddddf;
+  color: rgb(0 0 0 / 0.6);
+  word-wrap: anywhere;
+}
+
+.admonitionblock > table td.content > :last-child > :last-child {
+  margin-bottom: 0;
+}
+
+.exampleblock > .content {
+  border: 1px solid #e0e0dc;
+  margin-bottom: 1.25em;
+  padding: 1.25em;
+  background: #fffef7;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px #e0e0dc;
+}
+
+.sidebarblock {
+  border: 1px solid #dbdbd6;
+  margin-bottom: 1.25em;
+  padding: 1.25em;
+  background: #f3f3f2;
+  border-radius: 4px;
+}
+
+.sidebarblock > .content > .title {
+  color: #7a2518;
+  margin-top: 0;
+  text-align: center;
+}
+
+#content #toc > :first-child,
+.exampleblock > .content > :first-child,
+.sidebarblock > .content > :first-child {
+  margin-top: 0;
+}
+
+#content #toc > :last-child,
+.exampleblock > .content > :last-child,
+.exampleblock > .content > :last-child > :last-child,
+.exampleblock > .content .olist > ol > li:last-child > :last-child,
+.exampleblock > .content .ulist > ul > li:last-child > :last-child,
+.exampleblock > .content .qlist > ol > li:last-child > :last-child,
+.sidebarblock > .content > :last-child,
+.sidebarblock > .content > :last-child > :last-child,
+.sidebarblock > .content .olist > ol > li:last-child > :last-child,
+.sidebarblock > .content .ulist > ul > li:last-child > :last-child,
+.sidebarblock > .content .qlist > ol > li:last-child > :last-child {
+  margin-bottom: 0;
+}
+
+.literalblock pre,
+.listingblock > .content > pre {
+  border-radius: 4px;
+  overflow-x: auto;
+  padding: 1em;
+  font-size: 0.8125em;
+}
+
+@media screen and (min-width: 768px) {
+  .literalblock pre,
+  .listingblock > .content > pre {
+    font-size: 0.90625em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .literalblock pre,
+  .listingblock > .content > pre {
+    font-size: 1em;
+  }
+}
+
+.literalblock pre,
+.listingblock > .content > pre:not(.highlight),
+.listingblock > .content > pre[class=highlight],
+.listingblock > .content > pre[class^="highlight "] {
+  background: #f7f7f8;
+}
+
+.literalblock.output pre {
+  color: #f7f7f8;
+  background: rgb(0 0 0 / 0.9);
+}
+
+.listingblock > .content {
+  position: relative;
+}
+
+.listingblock pre > code {
+  display: block;
+}
+
+.listingblock code[data-lang]::before {
+  display: none;
+  content: attr(data-lang);
+  position: absolute;
+  font-size: 0.75em;
+  top: 0.425rem;
+  right: 0.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: inherit;
+  opacity: 0.5;
+}
+
+.listingblock:hover code[data-lang]::before {
+  display: block;
+}
+
+.listingblock.terminal pre .command::before {
+  content: attr(data-prompt);
+  padding-right: 0.5em;
+  color: inherit;
+  opacity: 0.5;
+}
+
+.listingblock.terminal pre .command:not([data-prompt])::before {
+  content: "$";
+}
+
+.listingblock pre.highlightjs {
+  padding: 0;
+}
+
+.listingblock pre.highlightjs > code {
+  padding: 1em;
+  border-radius: 4px;
+}
+
+.listingblock pre.prettyprint {
+  border-width: 0;
+}
+
+.prettyprint {
+  background: #f7f7f8;
+}
+
+pre.prettyprint .linenums {
+  line-height: 1.45;
+  margin-left: 2em;
+}
+
+pre.prettyprint li {
+  background: none;
+  list-style-type: inherit;
+  padding-left: 0;
+}
+
+pre.prettyprint li code[data-lang]::before {
+  opacity: 1;
+}
+
+pre.prettyprint li:not(:first-child) code[data-lang]::before {
+  display: none;
+}
+
+table.linenotable {
+  border-collapse: separate;
+  border: 0;
+  margin-bottom: 0;
+  background: none;
+}
+
+table.linenotable td[class] {
+  color: inherit;
+  vertical-align: top;
+  padding: 0;
+  line-height: inherit;
+  white-space: normal;
+}
+
+table.linenotable td.code {
+  padding-left: 0.75em;
+}
+
+table.linenotable td.linenos {
+  width: 0.01%;
+}
+
+table.linenotable td.linenos,
+pre.pygments .linenos,
+pre.rouge .linenos {
+  border-right: 1px solid;
+  opacity: 0.35;
+  padding-right: 0.5em;
+  user-select: none;
+}
+
+pre.pygments span.linenos,
+pre.rouge span.linenos {
+  display: inline-block;
+  margin-right: 0.75em;
+}
+
+.quoteblock {
+  margin: 0 1em 1.25em 1.5em;
+  display: table;
+}
+
+.quoteblock:not(.excerpt) > .title {
+  margin-left: -1.5em;
+  margin-bottom: 0.75em;
+}
+
+.quoteblock blockquote,
+.quoteblock p {
+  color: rgb(0 0 0 / 0.85);
+  font-size: 1.15rem;
+  line-height: 1.75;
+  word-spacing: 0.1em;
+  letter-spacing: 0;
+  font-style: italic;
+  text-align: justify;
+}
+
+.quoteblock blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.quoteblock blockquote::before {
+  content: "\201c";
+  float: left;
+  font-size: 2.75em;
+  font-weight: bold;
+  line-height: 0.6em;
+  margin-left: -0.6em;
+  color: #7a2518;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.1);
+}
+
+.quoteblock blockquote > .paragraph:last-child p {
+  margin-bottom: 0;
+}
+
+.quoteblock .attribution {
+  margin-top: 0.75em;
+  margin-right: 0.5ex;
+  text-align: right;
+}
+
+.verseblock {
+  margin: 0 1em 1.25em;
+}
+
+.verseblock pre {
+  font-family: "Open Sans", "DejaVu Sans", sans-serif;
+  font-size: 1.15rem;
+  color: rgb(0 0 0 / 0.85);
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+.verseblock pre strong {
+  font-weight: 400;
+}
+
+.verseblock .attribution {
+  margin-top: 1.25rem;
+  margin-left: 0.5ex;
+}
+
+.quoteblock .attribution,
+.verseblock .attribution {
+  font-size: 0.9375em;
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.quoteblock .attribution br,
+.verseblock .attribution br {
+  display: none;
+}
+
+.quoteblock .attribution cite,
+.verseblock .attribution cite {
+  display: block;
+  letter-spacing: -0.025em;
+  color: rgb(0 0 0 / 0.6);
+}
+
+.quoteblock.abstract blockquote::before,
+.quoteblock.excerpt blockquote::before,
+.quoteblock .quoteblock blockquote::before {
+  display: none;
+}
+
+.quoteblock.abstract blockquote,
+.quoteblock.abstract p,
+.quoteblock.excerpt blockquote,
+.quoteblock.excerpt p,
+.quoteblock .quoteblock blockquote,
+.quoteblock .quoteblock p {
+  line-height: 1.6;
+  word-spacing: 0;
+}
+
+.quoteblock.abstract {
+  margin: 0 1em 1.25em;
+  display: block;
+}
+
+.quoteblock.abstract > .title {
+  margin: 0 0 0.375em;
+  font-size: 1.15em;
+  text-align: center;
+}
+
+.quoteblock.excerpt > blockquote,
+.quoteblock .quoteblock {
+  padding: 0 0 0.25em 1em;
+  border-left: 0.25em solid #dddddf;
+}
+
+.quoteblock.excerpt,
+.quoteblock .quoteblock {
+  margin-left: 0;
+}
+
+.quoteblock.excerpt blockquote,
+.quoteblock.excerpt p,
+.quoteblock .quoteblock blockquote,
+.quoteblock .quoteblock p {
+  color: inherit;
+  font-size: 1.0625rem;
+}
+
+.quoteblock.excerpt .attribution,
+.quoteblock .quoteblock .attribution {
+  color: inherit;
+  font-size: 0.85rem;
+  text-align: left;
+  margin-right: 0;
+}
+
+p.tableblock:last-child {
+  margin-bottom: 0;
+}
+
+td.tableblock > .content {
+  margin-bottom: 1.25em;
+  word-wrap: anywhere;
+}
+
+td.tableblock > .content > :last-child {
+  margin-bottom: -1.25em;
+}
+
+table.tableblock,
+th.tableblock,
+td.tableblock {
+  border: 0 solid #dedede;
+}
+
+table.grid-all > * > tr > * {
+  border-width: 1px;
+}
+
+table.grid-cols > * > tr > * {
+  border-width: 0 1px;
+}
+
+table.grid-rows > * > tr > * {
+  border-width: 1px 0;
+}
+
+table.frame-all {
+  border-width: 1px;
+}
+
+table.frame-ends {
+  border-width: 1px 0;
+}
+
+table.frame-sides {
+  border-width: 0 1px;
+}
+
+table.frame-none > colgroup + * > :first-child > *,
+table.frame-sides > colgroup + * > :first-child > * {
+  border-top-width: 0;
+}
+
+table.frame-none > :last-child > :last-child > *,
+table.frame-sides > :last-child > :last-child > * {
+  border-bottom-width: 0;
+}
+
+table.frame-none > * > tr > :first-child,
+table.frame-ends > * > tr > :first-child {
+  border-left-width: 0;
+}
+
+table.frame-none > * > tr > :last-child,
+table.frame-ends > * > tr > :last-child {
+  border-right-width: 0;
+}
+
+table.stripes-all > * > tr,
+table.stripes-odd > * > tr:nth-of-type(odd),
+table.stripes-even > * > tr:nth-of-type(even),
+table.stripes-hover > * > tr:hover {
+  background: #f8f8f7;
+}
+
+th.halign-left,
+td.halign-left {
+  text-align: left;
+}
+
+th.halign-right,
+td.halign-right {
+  text-align: right;
+}
+
+th.halign-center,
+td.halign-center {
+  text-align: center;
+}
+
+th.valign-top,
+td.valign-top {
+  vertical-align: top;
+}
+
+th.valign-bottom,
+td.valign-bottom {
+  vertical-align: bottom;
+}
+
+th.valign-middle,
+td.valign-middle {
+  vertical-align: middle;
+}
+
+table thead th,
+table tfoot th {
+  font-weight: bold;
+}
+
+tbody tr th {
+  background: #f7f8f7;
+}
+
+tbody tr th,
+tbody tr th p,
+tfoot tr th,
+tfoot tr th p {
+  color: rgb(0 0 0 / 0.8);
+  font-weight: bold;
+}
+
+p.tableblock > code:only-child {
+  background: none;
+  padding: 0;
+}
+
+p.tableblock {
+  font-size: 1em;
+}
+
+ol {
+  margin-left: 1.75em;
+}
+
+ul li ol {
+  margin-left: 1.5em;
+}
+
+dl dd:last-child,
+dl dd:last-child > :last-child {
+  margin-bottom: 0;
+}
+
+li p,
+ul dd,
+ol dd,
+.olist .olist,
+.ulist .ulist,
+.ulist .olist,
+.olist .ulist {
+  margin-bottom: 0.625em;
+}
+
+ul.checklist,
+ul.none,
+ol.none,
+ul.no-bullet,
+ol.no-bullet,
+ol.unnumbered,
+ul.unstyled,
+ol.unstyled {
+  list-style-type: none;
+}
+
+ul.no-bullet,
+ol.no-bullet,
+ol.unnumbered {
+  margin-left: 0.625em;
+}
+
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+}
+
+li > p:empty:only-child::before {
+  content: "";
+  display: inline-block;
+}
+
+ul.checklist > li > p:first-child {
+  margin-left: -1em;
+}
+
+ul.checklist > li > p:first-child > .fa-square-o:first-child,
+ul.checklist > li > p:first-child > .fa-check-square-o:first-child {
+  width: 1.25em;
+  font-size: 0.8em;
+  position: relative;
+  bottom: 0.125em;
+}
+
+ul.checklist > li > p:first-child > input[type=checkbox]:first-child {
+  font: inherit;
+  margin: 0 0.25em 0 0;
+  padding: 0;
+}
+
+ul.inline {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0 0 0.625em -1.25em;
+}
+
+ul.inline > li {
+  margin-left: 1.25em;
+}
+
+.unstyled dl dt {
+  font-weight: 400;
+  font-style: normal;
+}
+
+ol.arabic {
+  list-style-type: decimal;
+}
+
+ol.decimal {
+  list-style-type: decimal-leading-zero;
+}
+
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+ol.lowergreek {
+  list-style-type: lower-greek;
+}
+
+.hdlist > table,
+.colist > table {
+  border: 0;
+  background: none;
+}
+
+.hdlist > table > tbody > tr,
+.colist > table > tbody > tr {
+  background: none;
+}
+
+td.hdlist1,
+td.hdlist2 {
+  vertical-align: top;
+  padding: 0 0.625em;
+}
+
+td.hdlist1 {
+  font-weight: bold;
+  padding-bottom: 1.25em;
+}
+
+td.hdlist2 {
+  word-wrap: anywhere;
+}
+
+.literalblock + .colist,
+.listingblock + .colist {
+  margin-top: -0.5em;
+}
+
+.colist td:not([class]):first-child {
+  padding: 0.4em 0.75em 0;
+  line-height: 1;
+  vertical-align: top;
+}
+
+.colist td:not([class]):first-child img {
+  max-width: none;
+}
+
+.colist td:not([class]):last-child {
+  padding: 0.25em 0;
+}
+
+.thumb,
+.th {
+  line-height: 0;
+  display: inline-block;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 1px #ddd;
+}
+
+.imageblock.left {
+  margin: 0.25em 0.625em 1.25em 0;
+}
+
+.imageblock.right {
+  margin: 0.25em 0 1.25em 0.625em;
+}
+
+.imageblock > .title {
+  margin-bottom: 0;
+}
+
+.imageblock.thumb,
+.imageblock.th {
+  border-width: 6px;
+}
+
+.imageblock.thumb > .title,
+.imageblock.th > .title {
+  padding: 0 0.125em;
+}
+
+.image.left,
+.image.right {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  display: inline-block;
+  line-height: 0;
+}
+
+.image.left {
+  margin-right: 0.625em;
+}
+
+.image.right {
+  margin-left: 0.625em;
+}
+
+a.image {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.image object {
+  pointer-events: none;
+}
+
+sup.footnote,
+sup.footnoteref {
+  font-size: 0.875em;
+  position: static;
+  vertical-align: super;
+}
+
+sup.footnote a,
+sup.footnoteref a {
+  text-decoration: none;
+}
+
+sup.footnote a:active,
+sup.footnoteref a:active,
+#footnotes .footnote a:first-of-type:active {
+  text-decoration: underline;
+}
+
+#footnotes {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  margin-bottom: 0.625em;
+}
+
+#footnotes hr {
+  width: 20%;
+  min-width: 6.25em;
+  margin: -0.25em 0 0.75em;
+  border-width: 1px 0 0;
+}
+
+#footnotes .footnote {
+  padding: 0 0.375em 0 0.225em;
+  line-height: 1.3334;
+  font-size: 0.875em;
+  margin-left: 1.2em;
+  margin-bottom: 0.2em;
+}
+
+#footnotes .footnote a:first-of-type {
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: -1.05em;
+}
+
+#footnotes .footnote:last-of-type {
+  margin-bottom: 0;
+}
+
+#content #footnotes {
+  margin-top: -0.625em;
+  margin-bottom: 0;
+  padding: 0.75em 0;
+}
+
+div.page-break {
+  display: none;
+}
+
+div.unbreakable {
+  break-inside: avoid;
+}
+
+.big {
+  font-size: larger;
+}
+
+.small {
+  font-size: smaller;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.overline {
+  text-decoration: overline;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.aqua {
+  color: #00bfbf;
+}
+
+.aqua-background {
+  background: #00fafa;
+}
+
+.black {
+  color: #000;
+}
+
+.black-background {
+  background: #000;
+}
+
+.blue {
+  color: #0000bf;
+}
+
+.blue-background {
+  background: #0000fa;
+}
+
+.fuchsia {
+  color: #bf00bf;
+}
+
+.fuchsia-background {
+  background: #fa00fa;
+}
+
+.gray {
+  color: #606060;
+}
+
+.gray-background {
+  background: #7d7d7d;
+}
+
+.green {
+  color: #006000;
+}
+
+.green-background {
+  background: #007d00;
+}
+
+.lime {
+  color: #00bf00;
+}
+
+.lime-background {
+  background: #00fa00;
+}
+
+.maroon {
+  color: #600000;
+}
+
+.maroon-background {
+  background: #7d0000;
+}
+
+.navy {
+  color: #000060;
+}
+
+.navy-background {
+  background: #00007d;
+}
+
+.olive {
+  color: #606000;
+}
+
+.olive-background {
+  background: #7d7d00;
+}
+
+.purple {
+  color: #600060;
+}
+
+.purple-background {
+  background: #7d007d;
+}
+
+.red {
+  color: #bf0000;
+}
+
+.red-background {
+  background: #fa0000;
+}
+
+.silver {
+  color: #909090;
+}
+
+.silver-background {
+  background: #bcbcbc;
+}
+
+.teal {
+  color: #006060;
+}
+
+.teal-background {
+  background: #007d7d;
+}
+
+.white {
+  color: #bfbfbf;
+}
+
+.white-background {
+  background: #fafafa;
+}
+
+.yellow {
+  color: #bfbf00;
+}
+
+.yellow-background {
+  background: #fafa00;
+}
+
+span.icon > .fa {
+  cursor: default;
+}
+
+a span.icon > .fa {
+  cursor: inherit;
+}
+
+.admonitionblock td.icon [class^="fa icon-"] {
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px rgb(0 0 0 / 0.5);
+  cursor: default;
+}
+
+.admonitionblock td.icon .icon-note::before {
+  content: "\f05a";
+  color: #19407c;
+}
+
+.admonitionblock td.icon .icon-tip::before {
+  content: "\f0eb";
+  text-shadow: 1px 1px 2px rgb(155 155 0 / 0.8);
+  color: #111;
+}
+
+.admonitionblock td.icon .icon-warning::before {
+  content: "\f071";
+  color: #bf6900;
+}
+
+.admonitionblock td.icon .icon-caution::before {
+  content: "\f06d";
+  color: #bf3400;
+}
+
+.admonitionblock td.icon .icon-important::before {
+  content: "\f06a";
+  color: #bf0000;
+}
+
+.conum[data-value] {
+  display: inline-block;
+  color: #fff !important;
+  background: rgb(0 0 0 / 0.8);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0.75em;
+  width: 1.67em;
+  height: 1.67em;
+  line-height: 1.67em;
+  font-family: "Open Sans", "DejaVu Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.conum[data-value] * {
+  color: #fff !important;
+}
+
+.conum[data-value] + b {
+  display: none;
+}
+
+.conum[data-value]::after {
+  content: attr(data-value);
+}
+
+pre .conum[data-value] {
+  position: relative;
+  top: -0.125em;
+}
+
+b.conum * {
+  color: inherit !important;
+}
+
+.conum:not([data-value]):empty {
+  display: none;
+}
+
+dt,
+th.tableblock,
+td.content,
+div.footnote {
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+p,
+td.content,
+span.alt,
+summary {
+  letter-spacing: -0.01em;
+}
+
+p strong,
+td.content strong,
+div.footnote strong {
+  letter-spacing: -0.005em;
+}
+
+p,
+blockquote,
+dt,
+td.content,
+td.hdlist1,
+span.alt,
+summary {
+  font-size: 1.0625rem;
+}
+
+.sidebarblock p,
+.sidebarblock dt,
+.sidebarblock td.content,
+p.tableblock {
+  font-size: 1em;
+}
+
+.print-only {
+  display: none !important;
+}
+
+@page {
+  margin: 1.25cm 0.75cm;
+}
+
+@media print {
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html {
+    font-size: 80%;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: underline !important;
+  }
+
+  a.bare,
+  a[href^="#"],
+  a[href^="mailto:"] {
+    text-decoration: none !important;
+  }
+
+  a[href^="http:"]:not(.bare)::after,
+  a[href^="https:"]:not(.bare)::after {
+    content: "(" attr(href) ")";
+    display: inline-block;
+    font-size: 0.875em;
+    padding-left: 0.25em;
+  }
+
+  abbr[title] {
+    border-bottom: 1px dotted;
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  pre,
+  blockquote,
+  tr,
+  img,
+  object,
+  svg {
+    break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  p,
+  blockquote,
+  dt,
+  td.content {
+    font-size: 1em;
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3,
+  #toctitle,
+  .sidebarblock > .content > .title {
+    break-after: avoid;
+  }
+
+  body > div[id] {
+    max-width: none;
+  }
+
+  #toc,
+  .sidebarblock,
+  .exampleblock > .content {
+    background: none !important;
+  }
+
+  #toc {
+    border-bottom: 1px solid #dddddf !important;
+    padding-bottom: 0 !important;
+  }
+
+  body.book #header {
+    text-align: center;
+  }
+
+  body.book #header > h1:first-child {
+    border: 0 !important;
+    margin: 2.5em 0 1em;
+  }
+
+  body.book #header .details {
+    border: 0 !important;
+    display: block;
+    padding: 0 !important;
+  }
+
+  body.book #header .details span:first-child {
+    margin-left: 0 !important;
+  }
+
+  body.book #header .details br {
+    display: block;
+  }
+
+  body.book #header .details br + span::before {
+    content: none !important;
+  }
+
+  body.book #toc {
+    border: 0 !important;
+    text-align: left !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  body.book #toc,
+  body.book #preamble,
+  body.book h1.sect0,
+  body.book .sect1 > h2 {
+    break-before: page;
+  }
+
+  .listingblock code[data-lang]::before {
+    display: block;
+  }
+
+  div.page-break {
+    display: block;
+    break-after: page;
+  }
+
+  #footer {
+    padding: 0 0.9375em;
+  }
+
+  .hide-on-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .hide-for-print {
+    display: none !important;
+  }
+
+  .show-for-print {
+    display: inherit !important;
+  }
+}
+
+@media amzn-kf8, print {
+  #header > h1:first-child {
+    margin-top: 1.25rem;
+  }
+
+  .sect1 {
+    padding: 0 !important;
+  }
+
+  .sect1 + .sect1 {
+    border: 0;
+  }
+
+  #footer {
+    background: none;
+  }
+
+  #footer-text {
+    color: rgb(0 0 0 / 0.6);
+    font-size: 0.9em;
+  }
+}
+
+@media amzn-kf8 {
+  body > div[id] {
+    padding: 0;
+  }
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>Rapport SAE 2.03</h1>
+<div class="details">
+<span id="author" class="author">Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025</span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table des matières</div>
+<ul class="sectlevel1">
+<li><a href="#_installation_automatisée_de_debian">Installation automatisée de Debian</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction">Introduction</a></li>
+<li><a href="#_actions_réalisées">Actions réalisées</a></li>
+</ul>
+</li>
+<li><a href="#_questions_semaine_1">Questions semaine 1</a>
+<ul class="sectlevel2">
+<li><a href="#_questions_1_configuration_matérielle_dans_virtualbox">Questions 1 : Configuration matérielle dans VirtualBox</a></li>
+<li><a href="#_questions_2_installation_de_base">Questions 2. Installation de base</a></li>
+<li><a href="#_questions_3_sudo">Question(s) 3 : sudo</a></li>
+<li><a href="#_questions_4_1_suppléments_invités">Questions 4.1 : Suppléments invités</a></li>
+<li><a href="#_questions_4_2_quelques_questions">Questions 4.2 : Quelques Questions</a></li>
+<li><a href="#_questions_5_ajustement_de_la_pré_configuration">Question(s) 5. Ajustement de la pré-configuration</a></li>
+</ul>
+</li>
+<li><a href="#_questions_semaine_3">Questions semaine 3</a>
+<ul class="sectlevel2">
+<li><a href="#_question_1_préliminaire">Question 1.Préliminaire</a></li>
+<li><a href="#_question_2_comparons">Question 2.Comparons</a></li>
+</ul>
+</li>
+<li><a href="#_sources">Sources</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_installation_automatisée_de_debian">Installation automatisée de Debian</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction">Introduction</h3>
+<div class="paragraph">
+<p>L’objectif de cette semaine (semaine 1) était d’automatiser complètement l’installation de Debian via un fichier de préconfiguration (<code>preseed.cfg</code>). Nous avons dû modifier ce fichier afin d’ajouter des fonctionnalités spécifiques, comme l’installation de l’environnement graphique MATE et de certains paquets, tout en configurant un utilisateur avec les droits <code>sudo</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_actions_réalisées">Actions réalisées</h3>
+<div class="paragraph">
+<p>Après avoir téléchargé et décompressé l&#8217;archive <code>autoinstall_Debian.zip</code> dans le répertoire de notre machine virtuelle, nous avons remplacé la chaine <code>@@UUID@@</code> présent dans le fichier <code>S203-Debian12.viso</code> avec la commande suivante :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sed -i -E "s/(--iprt-iso-maker-file-marker-bourne-sh).*$/\1=$(cat
+/proc/sys/kernel/random/uuid)/" S203-Debian12.viso</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Afin de donner les droits sudo à l&#8217;utilisateur standard, installer l&#8217;environnement MATE et installer des paquets supplémentaires, nous avons modifié le fichier <code>preseed-fr.cfg</code> en ajoutant des lignes. Nous avons ajouté les lignes suivantes pour ajouter les droits <code>sudo</code> à l&#8217;utilisateur standard, installer MATE et des paquets supplémentaires (<code>sudo</code>, <code>git</code>, <code>sqlite3</code>, <code>curl</code>, <code>bash-completion</code>, <code>neofetch</code>) :</p>
+</div>
+<div id="preseed" class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash"># Ajout de l'utilisateur dans le groupe sudo
+d-i passwd/user-default-groups string audio cdrom video sudo
+
+# Installation de MATE
+tasksel tasksel/first multiselect standard ssh-server mate-desktop
+
+# Installation des packages supplémentaires (sudo, git, sqlite3, curl, bash-completion, neofetch)
+d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pour l&#8217;installation des packages supplémentaires, nous avons d&#8217;abord tenté d&#8217;utiliser la commande suivante dans le fichier <code>preseed-fr.cfg</code> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">d-i preseed/late_command string in-target sh -c "apt-get update &amp;&amp; apt-get dist-upgrade -y &amp;&amp; apt-get install -y sudo git sqlite3 curl bash-completion neofetch"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cette solution n&#8217;ayant pas donné les résultats escomptés, nous avons finalement choisi d&#8217;utiliser <a href="#preseed">la commande présente plus haut.</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_questions_semaine_1">Questions semaine 1</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_questions_1_configuration_matérielle_dans_virtualbox">Questions 1 : Configuration matérielle dans VirtualBox</h3>
+<div class="paragraph">
+<p><strong>Que signifie "64-bit" dans "Debian 64-bit" ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Dans "Debian 64-bit", "64-bit" fait référence à l&#8217;architecture du système d&#8217;exploitation. Cela signifie que le système est conçu pour fonctionner sur des processeurs 64 bits, capables de traiter plus de données simultanément que les processeurs 32 bits <sup><a href="#source-1">[1]</a></sup>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Quelle est la configuration réseau utilisée par défaut ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Par défaut, VirtualBox utilise le mode de connexion réseau "NAT" (Network Address Translation). Dans ce mode, la machine virtuelle partage l&#8217;adresse IP de l&#8217;hôte et se connecte au réseau via celui-ci, permettant l&#8217;accès à Internet tout en restant inaccessible depuis l&#8217;extérieur <sup><a href="#source-2">[2]</a></sup>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Quel est le nom du fichier XML contenant la configuration de votre machine ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Le fichier s&#8217;appelle <code>sae203.vbox</code> et se trouve dans le dossier de la machine virtuelle. Sur les machines TP, il se trouve dans :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>/usr/local/virtual_machine/infoetu/{login}/vbox_vms/sae203/</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>où <code>{login}</code> est votre identifiant.</p>
+</div>
+<div class="paragraph">
+<p><strong>Sauriez-vous modifier directement ce fichier de configuration pour mettre deux processeurs à votre machine ?</strong></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Éteignez la machine virtuelle avant de continuer.</div>
+Avant de modifier ce fichier, éteignez la machine virtuelle sinon, les modifications seront écrasées au prochain redémarrage.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Dans la section <code>&lt;CPU&gt;</code> de <code>sae203.vbox</code>, modifiez l&#8217;attribut <code>count</code> à 2 :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;CPU count="2" hotplug="false"/&gt;</code></pre>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_questions_2_installation_de_base">Questions 2. Installation de base</h3>
+<div class="paragraph">
+<p><strong>Qu’est-ce qu’un fichier ISO bootable ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Un fichier ISO bootable est une image disque utilisée pour démarrer un ordinateur ou installer un système d&#8217;exploitation et/ou des logiciels <sup><a href="#source-3">[3]</a></sup>.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./img/iso.png" alt="Exemple de iso" width="15%">
+</div>
+<div class="title">Figure 1 : Exemple de fichier ISO</div>
+</div>
+<div class="paragraph">
+<p><strong>Qu’est-ce que MATE ? GNOME ?</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MATE : Un environnement de bureau basé sur l&#8217;ancienne version de GNOME 2. Il a été créé pour les utilisateurs qui préféraient l&#8217;interface de GNOME 2 après la transition de GNOME 3 vers une interface plus moderne<sup><a href="#source-4">[4]</a></sup>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./img/exempleMate.png" alt="Exemple de l&#8217;interface de Mate" width="75%">
+</div>
+<div class="title">Figure 2 : Environment de Mate</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GNOME : GNOME est un environnement de bureau largement utilisé sur les distributions Linux <sup><a href="#source-4">[4]</a></sup>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/exempleGnome.png" alt="Exemple de l&#8217;interface de Gnome" width="75%">
+</div>
+<div class="title">Figure 3 : Environment de Gnome</div>
+</div>
+<div class="paragraph">
+<p><strong>Qu’est-ce qu’un serveur web ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Un serveur web est un logiciel hébergeant des sites et applications web, accessibles via HTTP <sup><a href="#source-5">[5]</a></sup>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Qu’est-ce qu’un serveur SSH ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Un serveur SSH permet un accès à distance sécurisé au système, grâce à un chiffrement des communications <sup><a href="#source-6">[6]</a></sup>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Qu’est-ce qu’un serveur mandataire ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Un serveur mandataire (proxy) est un intermédiaire entre client et serveur, servant à filtrer et sécuriser les requêtes <sup><a href="#source-7">[7]</a></sup>.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_questions_3_sudo">Question(s) 3 : sudo</h3>
+<div class="paragraph">
+<p><strong>Comment peut-on savoir à quels groupes appartient l’utilisateur "user" ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Utilisez la commande <sup><a href="#source-8">[8]</a></sup> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">groups "user"</code></pre>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_questions_4_1_suppléments_invités">Questions 4.1 : Suppléments invités</h3>
+<div class="paragraph">
+<p><strong>Quel est la version du noyau Linux utilisé par votre VM ? Justifiez votre réponse.</strong></p>
+</div>
+<div class="paragraph">
+<p>Exécutez la commande:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">uname -r</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ce qui donne par exemple <code>6.1.0-31-amd64</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>À quoi servent les suppléments invités ? Donnez deux principales raisons de les installer.</strong></p>
+</div>
+<div class="paragraph">
+<p>Ils améliorent les performances graphiques, le partage des dossiers et périphériques entre l&#8217;hôte et la VM (redimensionnement dynamique de la fenêtre, gestion du clipboard, etc) <sup><a href="#source-9">[9]</a></sup>.</p>
+</div>
+<div class="paragraph">
+<p><strong>À quoi sert la commande mount (dans notre cas et en général) ?</strong></p>
+</div>
+<div class="paragraph">
+<p>La commande mount sert à monter un périphérique de stockage ou système de fichiers sur un répertoire spécifique. Ici, elle monte le CD des suppléments invités sur un répertoire du système.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_questions_4_2_quelques_questions">Questions 4.2 : Quelques Questions</h3>
+<div class="paragraph">
+<p><strong>Qu’est-ce que le Projet Debian ? D’où vient le nom Debian ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Le Projet Debian est une organisation communautaire développant le système d’exploitation Debian, composé de logiciels libres. Le nom "Debian" provient de la combinaison du prénom de son fondateur, Ian Murdock, et de celui de sa compagne de l&#8217;époque, Debra Lynn <sup><a href="#source-10">[10]</a></sup>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Quelles sont les durées de prise en charge (support) des versions Debian ? Pendant combien de temps les mises à jour de sécurité sont-elles assurées ?</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stripes-hover stretch">
+<caption class="title">Table 1. Durées de prise en charge des versions Debian <sup><a href="#source-11">[11]</a></sup></caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Durée de support</th>
+<th class="tableblock halign-left valign-top">Mises à jour de sécurité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Durée minimale</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 an après la sortie de la version suivante</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Support long terme (LTS)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 ans depuis la date de sortie initiale</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Support long terme étendu (ELTS)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jusqu&#8217;à 5 ans supplémentaires après le LTS, totalisant 10 ans</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Combien de versions sont activement maintenues par Debian ? Quelles sont leurs dénominations génériques ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Debian maintient au moins trois versions :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stable : Version stable actuelle, recommandée.</p>
+</li>
+<li>
+<p>Testing : Future version stable en cours de test.</p>
+</li>
+<li>
+<p>Unstable : Version de développement avec les dernières mises à jour.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>D’où viennent les noms de code des distributions majeures Debian ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Les noms de code proviennent des personnages du film "Toy Story" de Pixar.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Première version (Debian 1.1) : Nom de code Buzz, annoncée le 16 juin 1996.</p>
+</li>
+<li>
+<p>Dernière version (Debian 13) : Nom de code Trixie, annoncée le 12 août 2023.</p>
+</li>
+</ul>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_questions_5_ajustement_de_la_pré_configuration">Question(s) 5. Ajustement de la pré-configuration</h3>
+<div class="paragraph">
+<p><strong>Ajouter le droit d&#8217;utiliser sudo à l&#8217;utilisateur standard</strong></p>
+</div>
+<div class="paragraph">
+<p>Dans le fichier <code>preseed-fr.cfg</code>, ajoutez :</p>
+</div>
+<div class="listingblock text-center">
+<div class="content">
+<pre class="highlight"><code class="language-source" data-lang="source">d-i passwd/user-default-groups string audio cdrom video sudo</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Installer l’environnement MATE</strong></p>
+</div>
+<div class="paragraph">
+<p>Toujours dans <code>preseed-fr.cfg</code>, ajoutez :</p>
+</div>
+<div class="listingblock text-center">
+<div class="content">
+<pre class="highlight"><code class="language-source" data-lang="source">tasksel tasksel/first multiselect standard ssh-server mate-desktop</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Ajouter les paquets suivants : sudo, git, sqlite3, curl, bash-completion, neofetch</strong></p>
+</div>
+<div class="paragraph">
+<p>Toujours dans <code>preseed-fr.cfg</code>, ajoutez :</p>
+</div>
+<div class="listingblock text-center">
+<div class="content">
+<pre class="highlight"><code class="language-source" data-lang="source">d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_questions_semaine_3">Questions semaine 3</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_question_1_préliminaire">Question 1.Préliminaire</h3>
+<div class="paragraph">
+<p><strong>Qu’est-ce que le logiciel gitk ? Comment se lance-t-il ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Gitk est une interface graphique pour visualiser l’historique des commits d’un dépôt Git. Il permet de visualiser les branches, les commits et les relations entre eux sous forme de graphes.</p>
+</div>
+<div class="paragraph">
+<p>Pour l&#8217;ouvrir, il suffit de taper la commande <code>gitk</code> dans un terminal.</p>
+</div>
+<div class="paragraph">
+<p><strong>Qu’est-ce que le logiciel git-gui ? Comment se lance-t-il ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Git-gui est une autre interface graphique pour Git, mais par rapport à gitk, elle permet de gérer les actions courantes de Git comme ajouter des fichiers, créer des commits, fusionner des branches, etc.</p>
+</div>
+<div class="paragraph">
+<p>Pour l&#8217;ouvrir, il suffit de taper la commande <code>git gui</code> dans un terminal.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_question_2_comparons">Question 2.Comparons</h3>
+<div class="paragraph">
+<p><strong>Pourquoi avez-vous choisi ce logiciel ?</strong></p>
+</div>
+<div class="paragraph">
+<p>Nous avons choisi GitHub Desktop pour sa simplicité d&#8217;utilisation et sa gestion intuitive des dépôts Git. De plus, il est entièrement gratuit, contrairement à GitKraken qui, bien que plus complet, nécessite une licence payante pour certaines fonctionnalités, notamment l&#8217;utilisation avec des dépôts privés.</p>
+</div>
+<div class="paragraph">
+<p><strong>Comment l’avez-vous installé ?</strong></p>
+</div>
+<div class="sect3">
+<h4 id="_installation_sous_windows_ou_macos">Installation sous <strong>Windows</strong> ou <strong>MacOS</strong> :</h4>
+<div class="paragraph">
+<p>Il existe un installateur pour GitHub Desktop, disponible sur le site officiel de GitHub. Il suffit de télécharger l&#8217;installateur et de suivre les instructions pour l&#8217;installation sur une machine tournant sous Windows ou MacOS. Cet installateur est <a href="https://github.com/apps/desktop">disponible ici</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_installation_sur_linux">Installation sur <strong>Linux</strong> :</h4>
+<div class="paragraph">
+<p>Même si GitHub Desktop n&#8217;est pas officiellement supporté sur Linux, il existe des versions portées sur Linux par la communauté. Une de ces versions est maintenue par Brendan Forster, un membre de Github et est disponible sur son dépot Github.
+Des instructions d&#8217;installations sont disponibles sur ce dépot :</p>
+</div>
+<div class="listingblock text-center">
+<div class="content">
+<pre>https://github.com/shiftkey/desktop</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Comparez-le aux outils inclus avec Git (installé précédemment) ainsi qu’avec ce qui serait fait en ligne de commande pure : fonctionnalités avantages, inconvénients&#8230;&#8203;</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Gitk et Git-gui :</strong> Gitk est principalement utilisé pour visualiser l&#8217;historique des commits de manière graphique. Il permet de naviguer dans les branches et les commits, mais reste assez basique dans son interface.
+Git-gui, quant à lui, propose une interface pour effectuer les actions Git courantes comme le commit, le push, et la gestion des branches. Toutefois, il manque d&#8217;une gestion intuitive des conflits ou d&#8217;outils de visualisation avancée comme dans GitHub Desktop.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><strong>Avantages :</strong> Ces outils sont installés avec Git et n&#8217;ont pas de coûts supplémentaires. Git-gui reste un bon choix pour les actions de base.</p>
+</li>
+<li>
+<p><strong>Inconvénients :</strong> L&#8217;interface de Gitk et Git-gui peut être moins claire, en particulier pour les utilisateurs débutants.
+Moins de fonctionnalités avancées et d&#8217;intégration avec des services comme GitHub.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>GitHub Desktop
+:</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/screenshot-interface-github-desktop.png" alt="Exemple de l&#8217;interface de Mate" width="75%">
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><strong>Avantages :</strong> Interface très intuitive et facile à utiliser pour les débutants.
+Intégration complète avec GitHub (bien que ce ne soit pas limité à GitHub, il fonctionne également avec des dépôts Git locaux, Gitlab, BitBucket, etc&#8230;&#8203;).+
+Gestion des branches, commits, et push/pull très fluide.
+Prise en charge des conflits de fusion de manière plus visuelle et conviviale.
+Pas de nécessité d&#8217;utiliser la ligne de commande pour la plupart des opérations courantes.</p>
+</li>
+<li>
+<p><strong>Inconvénients :</strong> Moins de fonctionnalités avancées comparées à GitKraken (comme la gestion de projets plus complexes ou l’intégration avec plusieurs services).
+Ne convient pas bien aux utilisateurs avancés qui préfèrent une ligne de commande complète et plus personnalisable.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Ligne de commande pure :</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><strong>Avantages :</strong>
+Offre une flexibilité totale et permet de réaliser toutes les opérations possibles avec Git.
+L&#8217;utilisation de la ligne de commande permet une meilleure compréhension du fonctionnement interne de Git et est souvent plus rapide pour les utilisateurs expérimentés.</p>
+</li>
+<li>
+<p><strong>Inconvénients :</strong>
+Peut être complexe et déroutante pour les débutants.
+Prise en main difficile, surtout lorsqu&#8217;il s&#8217;agit de comprendre l&#8217;historique des commits ou de résoudre des conflits de manière visuelle.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>En conclusion, GitHub Desktop offre une solution simple et accessible pour les utilisateurs qui privilégient une interface graphique sans les difficultés des lignes de commande ou des outils plus complexe comme GitKraken, même qu&#8217;il ne soit pas aussi complet que GitKraken.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sources">Sources</h2>
+<div class="sectionbody">
+<div class="ulist bibliography">
+<ul class="bibliography">
+<li>
+<p><a id="source-1"></a>[1] <a href="https://www.lemagit.fr/definition/64-bits">Que signifie 64-bits ?</a><br></p>
+</li>
+<li>
+<p><a id="source-2"></a>[2] <a href="https://www.it-connect.fr/comprendre-les-differents-types-de-reseaux-virtualbox/">Type de réseau virtualbox</a><br></p>
+</li>
+<li>
+<p><a id="source-3"></a>[3] <a href="https://www.ionos.fr/digitalguide/serveur/know-how/quest-ce-quun-fichier-iso/">Fichier ISO</a><br></p>
+</li>
+<li>
+<p><a id="source-4"></a>[4] <a href="https://fr.linuxadictos.com/diferencias-entre-gnome-mate-y-unity.html">Différence GNOME MATE Unity</a><br></p>
+</li>
+<li>
+<p><a id="source-5"></a>[5] <a href="https://www.hostinger.fr/tutoriels/serveur-web">Qu&#8217;est-ce qu&#8217;un serveur web</a><br></p>
+</li>
+<li>
+<p><a id="source-6"></a>[6] <a href="https://fr.siteground.com/kb/quest-ce-que-ssh-et-comment-puis-je-lutiliser/">Utilisation SSH</a><br></p>
+</li>
+<li>
+<p><a id="source-7"></a>[7] <a href="https://www.techno-science.net/definition/3812.html">Serveur Mandataire</a><br></p>
+</li>
+<li>
+<p><a id="source-8"></a>[8] <a href="https://docs.redhat.com/fr/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/listing-the-primary-and-supplementary-user-groups_editing-user-groups-using-the-command-line#listing-the-primary-and-supplementary-user-groups_editing-user-groups-using-the-command-line">Liste de groupes commande Linux</a><br></p>
+</li>
+<li>
+<p><a id="source-9"></a>[9] <a href="https://www.virtualbox.org/manual/ch04.html#guestadd-intro">Introduction to Guest Additions</a><br></p>
+</li>
+<li>
+<p><a id="source-10"></a>[10] <a href="https://www.debian.org/intro/about.fr.html">Debian.org</a><br></p>
+</li>
+<li>
+<p><a id="source-11"></a>[11] <a href="https://www.debian.org/releases/">Debian Releases</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2025-02-28 19:51:07 +0100
+</div>
+</div>
+</body>
+</html>

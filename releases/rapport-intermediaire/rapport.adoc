@@ -95,7 +95,8 @@ image::./img/iso.png[Exemple de iso, width=15%]
 
 *Qu’est-ce que MATE ? GNOME ?*
 
-- MATE : Un environnement de bureau basé sur l'ancienne version de GNOME 2. Il a été créé pour les utilisateurs qui préféraient l'interface de GNOME 2 après la transition de GNOME 3 vers une interface plus moderne^<<source-4,[4]>>^.
+- MATE : Un environnement de bureau basé sur l'ancienne version de GNOME 2. Il a été créé pour les utilisateurs qui préféraient l'interface de GNOME 2 après la transition de GNOME 3 vers une interface plus moderne.
+Il est adapté aux machines plus anciennes ou aux utilisateurs recherchant un environnement plus léger et moins gourmand en ressourceS.^<<source-4,[4]>>^.
 
 [.text-center]
 .Environment de Mate

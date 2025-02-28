@@ -1,18 +1,38 @@
 = Rapport SAE 2.03
 Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
 :toc:
+:toc: left // A tester si ça fonctionne avec le PDF
 :toc-title: Table des matières
 
 == Installation automatisée de Debian
 
-// Je promets je fait ça plus tard
+=== Introduction 
 
-Aliqua consequat cillum cillum quis. Commodo veniam non fuMoins de fonctionnalités avancées comparé à GitKrakengiat esse incididunt veniam ea id labore id officia sint commodo sint. Deserunt ea et quis sint laboris dolore sint.
+L’objectif de cette séance était d’automatiser complètement l’installation de Debian via un fichier de préconfiguration (`preseed.cfg`). Nous avons dû modifier ce fichier afin d’ajouter des fonctionnalités spécifiques, comme l’installation de l’environnement graphique MATE et de certains paquets, tout en configurant un utilisateur avec les droits sudo``.
 
-Sint veniam commodo magna nulla dolore. Excepteur cupidatat quis est et aliqua sit laborum. Ad laboris eiusmod eiusmod sint ullamco ea do commodo ea est officia voluptate. Sit nostrud laborum et dolor nisi occaecat ipsum fugiat. Mollit eu qui magna mollit non excepteur sit tempor mollit nulla do enim cillum qui. Nulla et sint est fugiat occaecat culpa est sunt eu laboris excepteur occaecat labore.
+=== Actions réalisées
 
-Elit exercitation pariatur ea amet in dolore et. Fugiat aute labore duis adipisicing commodo enim est. Pariatur ex exercitation velit anim aliqua sint est ad elit id sint in qui anim. Deserunt magna nisi sint cillum do proident. Ipsum labore enim culpa do esse. Et ea occaecat cillum dolore non.
+Après avoir téléchargé et décompressé l'archive `autoinstall_Debian.zip` dans le répertoire de notre machine virtuelle, nous avons remplacé la chaine `@@UUID@@` présent dans le fichier `S203-Debian12.viso` avec la commande suivante :
 
+[source, bash]
+```
+sed -i -E "s/(--iprt-iso-maker-file-marker-bourne-sh).*$/\1=$(cat
+/proc/sys/kernel/random/uuid)/" S203-Debian12.viso
+```
+
+Afin de donner les droits sudo à l'utilisateur standard, installer l'environnement MATE et installer des paquets supplémentaires, nous avons modifié le fichier `preseed-fr.cfg` en ajoutant des lignes. Nous avons ajouté les lignes suivantes à notre `preseed-fr.cfg` pour ajouter les droits `sudo` à l'utilisateur standard, installer MATE et des paquets supplémentaires (sudo, git, sqlite3, curl, bash-completion, neofetch) :
+
+[source, bash]
+```
+# Ajout de l'utilisateur dans le groupe sudo
+d-i passwd/user-default-groups string audio cdrom video sudo
+
+# Installation de MATE
+tasksel tasksel/first multiselect standard ssh-server mate-desktop
+
+# Installation des packages supplémentaires (sudo, git, sqlite3, curl, bash-completion, neofetch)
+d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
+```
 
 == Questions semaine 1 
 
@@ -57,7 +77,7 @@ Dans la section `<CPU>` de `sae203.vbox`, modifiez l'attribut `count` à 2 :
 Un fichier ISO bootable est une image disque utilisée pour démarrer un ordinateur ou installer un système d'exploitation et/ou des logiciels ^<<source-3,[3]>>^.
 
 .Exemple de fichier ISO
-[caption="Figure 1: "]
+[caption="Figure 1 : "]
 image::img/iso.png[Exemple de iso, width=15%]
 
 *Qu’est-ce que MATE ? GNOME ?*
@@ -66,14 +86,14 @@ image::img/iso.png[Exemple de iso, width=15%]
 
 [.text-center]
 .Environment de Mate
-[caption="Figure 2: "]
+[caption="Figure 2 : "]
 image::img/exempleMate.png[Exemple de l'interface de Mate, width=75%]
 
 - GNOME : Environnement de bureau moderne, minimaliste et axé sur la simplicité ^<<source-4,[4]>>^.
 
 [.text-center]
 .Environment de Gnome
-[caption="Figure 3: "]
+[caption="Figure 3 : "]
 image::img/exempleGnome.png[Exemple de l'interface de Gnome, width=75%]
 
 *Qu’est-ce qu’un serveur web ?*
@@ -220,52 +240,29 @@ https://gist.github.com/berkorbay/6feda478a00b0432d13f1fc0a50467f1
 
 *Comparez-le aux outils inclus avec Git (installé précédemment) ainsi qu’avec ce qui serait fait en ligne de commande pure : fonctionnalités avantages, inconvénients...*
 
-. Gitk et Git-gui :
-
-Gitk est principalement utilisé pour visualiser l'historique des commits de manière graphique. Il permet de naviguer dans les branches et les commits, mais reste assez basique dans son interface.
+. **Gitk et Git-gui :** Gitk est principalement utilisé pour visualiser l'historique des commits de manière graphique. Il permet de naviguer dans les branches et les commits, mais reste assez basique dans son interface.
 Git-gui, quant à lui, propose une interface pour effectuer les actions Git courantes comme le commit, le push, et la gestion des branches. Toutefois, il manque d'une gestion intuitive des conflits ou d'outils de visualisation avancée comme dans GitHub Desktop.
-
-.. Avantages :
-
-Ces outils sont installés avec Git et n'ont pas de coûts supplémentaires.
-Git-gui reste un bon choix pour les actions de base.
-
-.. Inconvénients :
-
-L'interface de Gitk et Git-gui peut être moins claire, en particulier pour les utilisateurs débutants.
+.. **Avantages :** Ces outils sont installés avec Git et n'ont pas de coûts supplémentaires. Git-gui reste un bon choix pour les actions de base.
+.. **Inconvénients :** L'interface de Gitk et Git-gui peut être moins claire, en particulier pour les utilisateurs débutants.
 Moins de fonctionnalités avancées et d'intégration avec des services comme GitHub.
-
-. GitHub Desktop :
-
-[.text-center]
-.interface de GitHub Desktop
-[caption="Figure 4: "]
-image::img/screenshot-interface-github-desktop.png[Exemple de l'interface de Mate, width=75%, border-radius=20px]
-
-.. Avantages :
-
-Interface très intuitive et facile à utiliser pour les débutants.
+. GitHub Desktop
+:
+[caption="Figure 4 : Interface de Github Desktop"]
+image::img/screenshot-interface-github-desktop.png[Exemple de l'interface de Mate, width=75%, border-radius=20px, align=center]
+.. **Avantages :** Interface très intuitive et facile à utiliser pour les débutants.
 Intégration complète avec GitHub (bien que ce ne soit pas limité à GitHub, il fonctionne également avec des dépôts Git locaux).
 Gestion des branches, commits, et push/pull très fluide.
 Prise en charge des conflits de fusion de manière plus visuelle et conviviale.
 Pas de nécessité d'utiliser la ligne de commande pour la plupart des opérations courantes.
-
-.. Inconvénients :
-
-Moins de fonctionnalités avancées comparé à GitKraken (comme la gestion de projets plus complexes ou l’intégration avec plusieurs services).
+.. **Inconvénients :** Moins de fonctionnalités avancées comparé à GitKraken (comme la gestion de projets plus complexes ou l’intégration avec plusieurs services).
 Ne convient pas bien aux utilisateurs avancés qui préfèrent une ligne de commande complète et plus personnalisable.
-
 . Ligne de commande pure :
-
-.. Avantages :
-        
+.. **Avantages :**    
 Offre une flexibilité totale et permet de réaliser toutes les opérations possibles avec Git.
 L'utilisation de la ligne de commande permet une meilleure compréhension du fonctionnement interne de Git et est souvent plus rapide pour les utilisateurs expérimentés.
-
-.. Inconvénients :
+.. **Inconvénients :**
 Peut être complexe et déroutante pour les débutants.
 Prise en main difficile, surtout lorsqu'il s'agit de comprendre l'historique des commits ou de résoudre des conflits de manière visuelle.
-
 
 En conclusion, GitHub Desktop offre une solution simple et accessible pour les utilisateurs qui privilégient une interface graphique sans les difficultés des lignes de commande ou des outils plus complexe comme GitKraken, même qu'il ne soit pas aussi complet que GitKraken.
 
@@ -277,24 +274,25 @@ En conclusion, GitHub Desktop offre une solution simple et accessible pour les u
 
 // Pour rajouter des sources, rajoutez ça dans votre texte : ^<<source-x,[x]>>^
 
-* [[source-1]][1] https://www.lemagit.fr/definition/64-bits. +
 
-* [[source-2]][2] https://www.it-connect.fr/comprendre-les-differents-types-de-reseaux-virtualbox/. +
+* [[source-1]][1] https://www.lemagit.fr/definition/64-bits[Que signifie 64-bits ?] +
 
-* [[source-3]][3] https://www.ionos.fr/digitalguide/serveur/know-how/quest-ce-quun-fichier-iso/ +
+* [[source-2]][2] https://www.it-connect.fr/comprendre-les-differents-types-de-reseaux-virtualbox/[Type de réseau virtualbox] +
 
-* [[source-4]][4] https://fr.linuxadictos.com/diferencias-entre-gnome-mate-y-unity.html +
+* [[source-3]][3] https://www.ionos.fr/digitalguide/serveur/know-how/quest-ce-quun-fichier-iso/[Fichier ISO] +
 
-* [[source-5]][5] https://www.hostinger.fr/tutoriels/serveur-web +
+* [[source-4]][4] https://fr.linuxadictos.com/diferencias-entre-gnome-mate-y-unity.html[Différence GNOME MATE Unity] +
 
-* [[source-6]][6] https://fr.siteground.com/kb/quest-ce-que-ssh-et-comment-puis-je-lutiliser/ +
+* [[source-5]][5] https://www.hostinger.fr/tutoriels/serveur-web[Qu'est ce qu'un serveur web] +
 
-* [[source-7]][7] https://www.techno-science.net/definition/3812.html +
+* [[source-6]][6] https://fr.siteground.com/kb/quest-ce-que-ssh-et-comment-puis-je-lutiliser/[Utilisation SSH] +
 
-* [[source-8]][8] https://docs.redhat.com/fr/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/listing-the-primary-and-supplementary-user-groups_editing-user-groups-using-the-command-line#listing-the-primary-and-supplementary-user-groups_editing-user-groups-using-the-command-line +
+* [[source-7]][7] https://www.techno-science.net/definition/3812.html[Serveur Mandataire] +
 
-* [[source-9]][9] https://www.virtualbox.org/manual/ch04.html#guestadd-intro +
+* [[source-8]][8] https://docs.redhat.com/fr/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/listing-the-primary-and-supplementary-user-groups_editing-user-groups-using-the-command-line#listing-the-primary-and-supplementary-user-groups_editing-user-groups-using-the-command-line[Liste de groupes commande Linux] +
 
-* [[source-10]][10] https://www.debian.org/intro/about.fr.html +
+* [[source-9]][9] https://www.virtualbox.org/manual/ch04.html#guestadd-intro[Introduction to Guest Additions] +
 
-* [[source-11]][11] https://www.debian.org/releases/[Get Debian]!
+* [[source-10]][10] https://www.debian.org/intro/about.fr.html[Debian.org] +
+
+* [[source-11]][11] https://www.debian.org/releases/[Debian Releases]

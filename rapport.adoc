@@ -2,6 +2,7 @@
 Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
 :toc: left
 :toc-title: Table des matières
+// Nous avons inclus un fichier default.css afin de rajouter des coins arrondis aux images.
 :stylesheet: ./css/default.css
 :icons: font
 

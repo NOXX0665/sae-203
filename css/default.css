@@ -179,7 +179,7 @@ svg {
 
 img {
   border: 0;
-  border-radius:30px;
+  border-radius:10px;
   -ms-interpolation-mode: bicubic;
 }
 

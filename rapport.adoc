@@ -86,6 +86,7 @@ Dans la section `<CPU>` de `sae203.vbox`, modifiez l'attribut `count` à 2 :
 
 Un fichier ISO bootable est une image disque utilisée pour démarrer un ordinateur ou installer un système d'exploitation et/ou des logiciels ^<<source-3,[3]>>^.
 
+[.text-center]
 .Exemple de fichier ISO
 [caption="Figure 1 : "]
 image::./img/iso.png[Exemple de iso, width=15%]

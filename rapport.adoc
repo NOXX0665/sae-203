@@ -1,6 +1,5 @@
 = Rapport SAE 2.03
 Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
-:toc:
 :toc: left // A tester si ça fonctionne avec le PDF
 :toc-title: Table des matières
 
@@ -92,14 +91,15 @@ image::img/iso.png[Exemple de iso, width=15%]
 
 *Qu’est-ce que MATE ? GNOME ?*
 
-- MATE : Environnement de bureau léger et classique, dérivé de GNOME 2 ^<<source-4,[4]>>^.
+- MATE : Un environnement de bureau basé sur l'ancienne version de GNOME 2. Il a été crée pour les utilisateurs qui préféraient l'interface de GNOME 2 après la transition de GNOME 3 vers une interface plus moderne.
+Il est adapté aux machines plus anciennes ou aux utilisateurs recherchant un environnement plus léger et moins gournmand en ressourceS.^<<source-4,[4]>>^.
 
 [.text-center]
 .Environment de Mate
 [caption="Figure 2 : "]
 image::img/exempleMate.png[Exemple de l'interface de Mate, width=75%]
 
-- GNOME : Environnement de bureau moderne, minimaliste et axé sur la simplicité ^<<source-4,[4]>>^.
+- GNOME : GNOME est un environnement de bureau largement utilisé sur les distribution Linux ^<<source-4,[4]>>^.
 
 [.text-center]
 .Environment de Gnome
@@ -278,12 +278,6 @@ En conclusion, GitHub Desktop offre une solution simple et accessible pour les u
 
 [bibliography]
 == Sources
-
-// Le "+" à la fin de chaque ligne est là pour passer la ligne
-// Le "*" au début de chaque ligne est là pour créer une liste non ordonnée (c'est comme ça dans la doc (https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#bibliography))
-
-// Pour rajouter des sources, rajoutez ça dans votre texte : ^<<source-x,[x]>>^
-
 
 * [[source-1]][1] https://www.lemagit.fr/definition/64-bits[Que signifie 64-bits ?] +
 

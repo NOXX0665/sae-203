@@ -35,7 +35,7 @@ tasksel tasksel/first multiselect standard ssh-server mate-desktop
 d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
 ```
 
-Nous avons rencontré des problèmes avec la dernière ligne, nous avons essayé d'ajouter commande-preseed-fonctionne,la commande ci-dessus au `late_command` : 
+Cette solution n'ayant pas donné les résultats escomptés, nous avons finalement choisi d'utiliser <<preseed,la commande présente dans le preseed plus haut>>
 
 [source, bash]
 ```

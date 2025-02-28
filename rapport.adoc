@@ -14,7 +14,7 @@ L’objectif de cette séance était d’automatiser complètement l’installat
 
 Après avoir téléchargé et décompressé l'archive `autoinstall_Debian.zip` dans le répertoire de notre machine virtuelle, nous avons remplacé la chaine `@@UUID@@` présent dans le fichier `S203-Debian12.viso` avec la commande suivante :
 
-[source, bash]
+[source,bash]
 ```
 sed -i -E "s/(--iprt-iso-maker-file-marker-bourne-sh).*$/\1=$(cat
 /proc/sys/kernel/random/uuid)/" S203-Debian12.viso
@@ -22,7 +22,7 @@ sed -i -E "s/(--iprt-iso-maker-file-marker-bourne-sh).*$/\1=$(cat
 
 Afin de donner les droits sudo à l'utilisateur standard, installer l'environnement MATE et installer des paquets supplémentaires, nous avons modifié le fichier `preseed-fr.cfg` en ajoutant des lignes. Nous avons ajouté les lignes suivantes à notre `preseed-fr.cfg` pour ajouter les droits `sudo` à l'utilisateur standard, installer MATE et des paquets supplémentaires (sudo, git, sqlite3, curl, bash-completion, neofetch) :
 
-[source, bash]
+[source,bash]
 ```
 # Ajout de l'utilisateur dans le groupe sudo
 d-i passwd/user-default-groups string audio cdrom video sudo

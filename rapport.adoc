@@ -1,14 +1,15 @@
 = Rapport SAE 2.03
 Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
-:toc: left // A tester si ça fonctionne avec le PDF
+:toc: left
 :toc-title: Table des matières
 :stylesheet: ./css/default.css
+:icons: font
 
 == Installation automatisée de Debian
 
 === Introduction 
 
-L’objectif de cette séance était d’automatiser complètement l’installation de Debian via un fichier de préconfiguration (`preseed.cfg`). Nous avons dû modifier ce fichier afin d’ajouter des fonctionnalités spécifiques, comme l’installation de l’environnement graphique MATE et de certains paquets, tout en configurant un utilisateur avec les droits `sudo`.
+L’objectif de cette semaine (semaine 1) était d’automatiser complètement l’installation de Debian via un fichier de préconfiguration (`preseed.cfg`). Nous avons dû modifier ce fichier afin d’ajouter des fonctionnalités spécifiques, comme l’installation de l’environnement graphique MATE et de certains paquets, tout en configurant un utilisateur avec les droits `sudo`.
 
 === Actions réalisées
 
@@ -20,7 +21,7 @@ sed -i -E "s/(--iprt-iso-maker-file-marker-bourne-sh).*$/\1=$(cat
 /proc/sys/kernel/random/uuid)/" S203-Debian12.viso
 ----
 
-Afin de donner les droits sudo à l'utilisateur standard, installer l'environnement MATE et installer des paquets supplémentaires, nous avons modifié le fichier `preseed-fr.cfg` en ajoutant des lignes. Nous avons ajouté les lignes suivantes à notre `preseed-fr.cfg` pour ajouter les droits `sudo` à l'utilisateur standard, installer MATE et des paquets supplémentaires (sudo, git, sqlite3, curl, bash-completion, neofetch) :
+Afin de donner les droits sudo à l'utilisateur standard, installer l'environnement MATE et installer des paquets supplémentaires, nous avons modifié le fichier `preseed-fr.cfg` en ajoutant des lignes. Nous avons ajouté les lignes suivantes pour ajouter les droits `sudo` à l'utilisateur standard, installer MATE et des paquets supplémentaires (`sudo`, `git`, `sqlite3`, `curl`, `bash-completion`, `neofetch`) :
 
 [[preseed]]
 [source,bash]
@@ -35,14 +36,14 @@ tasksel tasksel/first multiselect standard ssh-server mate-desktop
 d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
 ----
 
-Cette solution n'ayant pas donné les résultats escomptés, nous avons finalement choisi d'utiliser <<preseed,la commande présente dans le preseed plus haut.>>
+Pour l'installation des packages supplémentaires, nous avons d'abord tenté d'utiliser la commande suivante dans le fichier `preseed-fr.cfg` :
 
 [source, bash]
 ----
 d-i preseed/late_command string in-target sh -c "apt-get update && apt-get dist-upgrade -y && apt-get install -y sudo git sqlite3 curl bash-completion neofetch"
 ----
 
-Cette solution n'ayant pas donné les résultats escomptés, nous avons finalement choisi d'utiliser <<preseed,la commande présente dans le preseed plus haut.>>
+Cette solution n'ayant pas donné les résultats escomptés, nous avons finalement choisi d'utiliser <<preseed,la commande présente plus haut.>>
 
 == Questions semaine 1 
 
@@ -257,12 +258,12 @@ Git-gui, quant à lui, propose une interface pour effectuer les actions Git cour
 .. **Avantages :** Ces outils sont installés avec Git et n'ont pas de coûts supplémentaires. Git-gui reste un bon choix pour les actions de base.
 .. **Inconvénients :** L'interface de Gitk et Git-gui peut être moins claire, en particulier pour les utilisateurs débutants.
 Moins de fonctionnalités avancées et d'intégration avec des services comme GitHub.
-. GitHub Desktop
+. GitHub Desktop 
 :
-[caption="Figure 4 : Interface de Github Desktop"]
+[caption="Figure 4 : "]
 image::img/screenshot-interface-github-desktop.png[Exemple de l'interface de Mate, width=75%, border-radius=20px, align=center]
 .. **Avantages :** Interface très intuitive et facile à utiliser pour les débutants.
-Intégration complète avec GitHub (bien que ce ne soit pas limité à GitHub, il fonctionne également avec des dépôts Git locaux).
+Intégration complète avec GitHub (bien que ce ne soit pas limité à GitHub, il fonctionne également avec des dépôts Git locaux, Gitlab, BitBucket, etc...).+
 Gestion des branches, commits, et push/pull très fluide.
 Prise en charge des conflits de fusion de manière plus visuelle et conviviale.
 Pas de nécessité d'utiliser la ligne de commande pour la plupart des opérations courantes.
@@ -278,6 +279,7 @@ Prise en main difficile, surtout lorsqu'il s'agit de comprendre l'historique des
 
 En conclusion, GitHub Desktop offre une solution simple et accessible pour les utilisateurs qui privilégient une interface graphique sans les difficultés des lignes de commande ou des outils plus complexe comme GitKraken, même qu'il ne soit pas aussi complet que GitKraken.
 
+<<<
 [bibliography]
 == Sources
 

@@ -245,10 +245,20 @@ Nous avons choisi GitHub Desktop pour sa simplicité d'utilisation et sa gestion
 
 *Comment l’avez-vous installé ?*
 
-Pour l'installer, il faut aller sur le github et simplement suivre ce qui est écrit
+[notoc]
+==== Installation sous **Windows** ou **MacOS** :
+
+Il existe un installateur pour GitHub Desktop, disponible sur le site officiel de GitHub. Il suffit de télécharger l'installateur et de suivre les instructions pour l'installation sur une machine tournant sous Windows ou MacOS. Cet installateur est https://github.com/apps/desktop[disponible ici]
+
+[notoc]
+==== Installation sur **Linux** :
+
+Même si GitHub Desktop n'est pas officiellement supporté sur Linux, il existe des versions portées sur Linux par la communauté. Une de ces versions est maintenue par Brendan Forster, un membre de Github et est disponible sur son dépot Github.
+Des instructions d'installations sont disponibles sur ce dépot :
+
 [.text-center]
 ----
-https://gist.github.com/berkorbay/6feda478a00b0432d13f1fc0a50467f1
+https://github.com/shiftkey/desktop
 ----
 
 *Comparez-le aux outils inclus avec Git (installé précédemment) ainsi qu’avec ce qui serait fait en ligne de commande pure : fonctionnalités avantages, inconvénients...*

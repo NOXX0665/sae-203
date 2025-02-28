@@ -1,6 +1,6 @@
 # Comment convertir un fichier .adoc sur Linux ?
 
-## Installation de **asciidoctor**
+## ⤓ Installation de `asciidoctor`
 Utilisez la commande suivante pour **installer** le package asciidotor :
 ```bash
 sudo apt install asciidoctor
@@ -10,14 +10,14 @@ sudo apt install asciidoctor
 asciidoctor --version
 ```
 
-## Convertir un fichier `.adoc` en fichier `.html`
+## ⇄ Convertir un fichier `.adoc` en fichier `.html`
 Utilisez la commande suivante pour **convertir** votre fichier `adoc` en fichier `html`:
 ```bash
 asciidoctor rapport.adoc
 ```
-Un _fichier.html_ du meme nom que votre `fichier.adoc` sera automatiquement créé dans le répertoire. 
+📄 Un `fichier.html` du meme nom que votre `fichier.adoc` sera automatiquement créé dans le répertoire. 
 
-## Convertir un fichier `.adoc` en `.pdf`
+## ⇄ Convertir un fichier `.adoc` en `.pdf`
 Tout d'abord, vous allez devoir installer **ruby** :
 ```bash
 sudo apt install ruby-full
@@ -40,4 +40,4 @@ Utilisez la commande suivante pour **convertir** votre fichier `adoc` en fichier
 ```bash
 asciidoctor-pdf rapport.adoc
 ```
-Un `fichier.pdf` du meme nom que votre `fichier.adoc` sera automatiquement créé dans le répertoire.
+📄 Un `fichier.pdf` du meme nom que votre `fichier.adoc` sera automatiquement créé dans le répertoire.

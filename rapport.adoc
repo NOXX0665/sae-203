@@ -8,7 +8,7 @@ Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
 
 === Introduction 
 
-L’objectif de cette séance était d’automatiser complètement l’installation de Debian via un fichier de préconfiguration (`preseed.cfg`). Nous avons dû modifier ce fichier afin d’ajouter des fonctionnalités spécifiques, comme l’installation de l’environnement graphique MATE et de certains paquets, tout en configurant un utilisateur avec les droits sudo``.
+L’objectif de cette séance était d’automatiser complètement l’installation de Debian via un fichier de préconfiguration (`preseed.cfg`). Nous avons dû modifier ce fichier afin d’ajouter des fonctionnalités spécifiques, comme l’installation de l’environnement graphique MATE et de certains paquets, tout en configurant un utilisateur avec les droits `sudo`.
 
 === Actions réalisées
 
@@ -22,6 +22,7 @@ sed -i -E "s/(--iprt-iso-maker-file-marker-bourne-sh).*$/\1=$(cat
 
 Afin de donner les droits sudo à l'utilisateur standard, installer l'environnement MATE et installer des paquets supplémentaires, nous avons modifié le fichier `preseed-fr.cfg` en ajoutant des lignes. Nous avons ajouté les lignes suivantes à notre `preseed-fr.cfg` pour ajouter les droits `sudo` à l'utilisateur standard, installer MATE et des paquets supplémentaires (sudo, git, sqlite3, curl, bash-completion, neofetch) :
 
+[[preseed]]
 [source,bash]
 ```
 # Ajout de l'utilisateur dans le groupe sudo
@@ -33,6 +34,15 @@ tasksel tasksel/first multiselect standard ssh-server mate-desktop
 # Installation des packages supplémentaires (sudo, git, sqlite3, curl, bash-completion, neofetch)
 d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
 ```
+
+Nous avons rencontré des problèmes avec la dernière ligne, nous avons essayé d'ajouter commande-preseed-fonctionne,la commande ci-dessus au `late_command` : 
+
+[source, bash]
+```
+d-i preseed/late_command string in-target sh -c "apt-get update && apt-get dist-upgrade -y && apt-get install -y sudo git sqlite3 curl bash-completion neofetch"
+```
+
+Cette solution n'ayant pas donné les résultats escomptés, nous avons finalement choisi d'utiliser <<preseed,la commande présente dans le preseed plus haut>>
 
 == Questions semaine 1 
 

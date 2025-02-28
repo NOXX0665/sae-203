@@ -2,6 +2,7 @@
 Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
 :toc: left // A tester si ça fonctionne avec le PDF
 :toc-title: Table des matières
+:stylesheet: ./css/default.css
 
 == Installation automatisée de Debian
 
@@ -87,7 +88,7 @@ Un fichier ISO bootable est une image disque utilisée pour démarrer un ordinat
 
 .Exemple de fichier ISO
 [caption="Figure 1 : "]
-image::img/iso.png[Exemple de iso, width=15%]
+image::./img/iso.png[Exemple de iso, width=15%]
 
 *Qu’est-ce que MATE ? GNOME ?*
 
@@ -97,7 +98,7 @@ Il est adapté aux machines plus anciennes ou aux utilisateurs recherchant un en
 [.text-center]
 .Environment de Mate
 [caption="Figure 2 : "]
-image::img/exempleMate.png[Exemple de l'interface de Mate, width=75%]
+image::./img/exempleMate.png[Exemple de l'interface de Mate, width=75%]
 
 - GNOME : GNOME est un environnement de bureau largement utilisé sur les distribution Linux ^<<source-4,[4]>>^.
 

@@ -15,16 +15,16 @@ L’objectif de cette séance était d’automatiser complètement l’installat
 Après avoir téléchargé et décompressé l'archive `autoinstall_Debian.zip` dans le répertoire de notre machine virtuelle, nous avons remplacé la chaine `@@UUID@@` présent dans le fichier `S203-Debian12.viso` avec la commande suivante :
 
 [source,bash]
-```
+----
 sed -i -E "s/(--iprt-iso-maker-file-marker-bourne-sh).*$/\1=$(cat
 /proc/sys/kernel/random/uuid)/" S203-Debian12.viso
-```
+----
 
 Afin de donner les droits sudo à l'utilisateur standard, installer l'environnement MATE et installer des paquets supplémentaires, nous avons modifié le fichier `preseed-fr.cfg` en ajoutant des lignes. Nous avons ajouté les lignes suivantes à notre `preseed-fr.cfg` pour ajouter les droits `sudo` à l'utilisateur standard, installer MATE et des paquets supplémentaires (sudo, git, sqlite3, curl, bash-completion, neofetch) :
 
 [[preseed]]
 [source,bash]
-```
+----
 # Ajout de l'utilisateur dans le groupe sudo
 d-i passwd/user-default-groups string audio cdrom video sudo
 
@@ -33,16 +33,16 @@ tasksel tasksel/first multiselect standard ssh-server mate-desktop
 
 # Installation des packages supplémentaires (sudo, git, sqlite3, curl, bash-completion, neofetch)
 d-i pkgsel/include string sudo git sqlite3 curl bash-completion neofetch
-```
+----
 
-Cette solution n'ayant pas donné les résultats escomptés, nous avons finalement choisi d'utiliser <<preseed,la commande présente dans le preseed plus haut>>
+Cette solution n'ayant pas donné les résultats escomptés, nous avons finalement choisi d'utiliser <<preseed,la commande présente dans le preseed plus haut.>>
 
 [source, bash]
-```
+----
 d-i preseed/late_command string in-target sh -c "apt-get update && apt-get dist-upgrade -y && apt-get install -y sudo git sqlite3 curl bash-completion neofetch"
-```
+----
 
-Cette solution n'ayant pas donné les résultats escomptés, nous avons finalement choisi d'utiliser <<preseed,la commande présente dans le preseed plus haut>>
+Cette solution n'ayant pas donné les résultats escomptés, nous avons finalement choisi d'utiliser <<preseed,la commande présente dans le preseed plus haut.>>
 
 == Questions semaine 1 
 
@@ -92,15 +92,15 @@ image::./img/iso.png[Exemple de iso, width=15%]
 
 *Qu’est-ce que MATE ? GNOME ?*
 
-- MATE : Un environnement de bureau basé sur l'ancienne version de GNOME 2. Il a été crée pour les utilisateurs qui préféraient l'interface de GNOME 2 après la transition de GNOME 3 vers une interface plus moderne.
-Il est adapté aux machines plus anciennes ou aux utilisateurs recherchant un environnement plus léger et moins gournmand en ressourceS.^<<source-4,[4]>>^.
+- MATE : Un environnement de bureau basé sur l'ancienne version de GNOME 2. Il a été créé pour les utilisateurs qui préféraient l'interface de GNOME 2 après la transition de GNOME 3 vers une interface plus moderne.
+Il est adapté aux machines plus anciennes ou aux utilisateurs recherchant un environnement plus léger et moins gourmand en ressourceS.^<<source-4,[4]>>^.
 
 [.text-center]
 .Environment de Mate
 [caption="Figure 2 : "]
 image::./img/exempleMate.png[Exemple de l'interface de Mate, width=75%]
 
-- GNOME : GNOME est un environnement de bureau largement utilisé sur les distribution Linux ^<<source-4,[4]>>^.
+- GNOME : GNOME est un environnement de bureau largement utilisé sur les distributions Linux ^<<source-4,[4]>>^.
 
 [.text-center]
 .Environment de Gnome
@@ -265,7 +265,7 @@ Intégration complète avec GitHub (bien que ce ne soit pas limité à GitHub, i
 Gestion des branches, commits, et push/pull très fluide.
 Prise en charge des conflits de fusion de manière plus visuelle et conviviale.
 Pas de nécessité d'utiliser la ligne de commande pour la plupart des opérations courantes.
-.. **Inconvénients :** Moins de fonctionnalités avancées comparé à GitKraken (comme la gestion de projets plus complexes ou l’intégration avec plusieurs services).
+.. **Inconvénients :** Moins de fonctionnalités avancées comparées à GitKraken (comme la gestion de projets plus complexes ou l’intégration avec plusieurs services).
 Ne convient pas bien aux utilisateurs avancés qui préfèrent une ligne de commande complète et plus personnalisable.
 . Ligne de commande pure :
 .. **Avantages :**    
@@ -288,7 +288,7 @@ En conclusion, GitHub Desktop offre une solution simple et accessible pour les u
 
 * [[source-4]][4] https://fr.linuxadictos.com/diferencias-entre-gnome-mate-y-unity.html[Différence GNOME MATE Unity] +
 
-* [[source-5]][5] https://www.hostinger.fr/tutoriels/serveur-web[Qu'est ce qu'un serveur web] +
+* [[source-5]][5] https://www.hostinger.fr/tutoriels/serveur-web[Qu'est-ce qu'un serveur web] +
 
 * [[source-6]][6] https://fr.siteground.com/kb/quest-ce-que-ssh-et-comment-puis-je-lutiliser/[Utilisation SSH] +
 

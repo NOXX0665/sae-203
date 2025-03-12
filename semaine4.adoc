@@ -38,3 +38,27 @@ Nous avons la version 1.23.5 de Gitea.
 //J'ai un doute sur ça
 
 Pour mettre à jour le binaire de Gitea sans reconfigurer tout le système, il suffit de télécharger la dernière version stable du binaire et de remplacer l'exécutable actuel par le nouveau, comme expliqué précédemment. Cette méthode permet de conserver toutes les configurations existantes, y compris les paramètres de base de données et les utilisateurs.
+
+== Tests d'utilisation
+
+=== Créations d'utilisateurs
+
+Avant de créer des projets, on peut créer différents utilisateurs. Il y a plusieurs moyens de créer des utilisateurs sur Gitea :
+
+[notoc]
+==== En tant qu'administrateur
+
+En tant qu'administrateur, il est possible d'aller dans la page d'administration du site et ensuite accéder à la page "User accounts" pour créer un utilisateurs
+
+.Tutoriel pour accéder à la page de création d'utilisateur
+video::video/admin_creation_user.mp4[]
+
+[notoc]
+==== En tant qu'utilisateur standard
+
+On peut créer un compte sur la page d'accueil de Gitea elit sit elit ullamco tempor aute occaecat id consectetur amet.
+
+> Réalisez l'ajout d'un projet directement créé depuis l’interface web de Gitea
+
+.tuto
+video::video/admin_creation_user.mp4[]

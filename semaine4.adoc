@@ -66,10 +66,11 @@ video::video/admin_creation_user.mp4[]
 
 On peut créer un compte sur la page d'accueil de Gitea elit sit elit ullamco tempor aute occaecat id consectetur amet.
 
-
 .Tutoriel sur la création de comptes sans accès administrateur
 video::video/admin_creation_user.mp4[]
 
 === Création de projets
 
 > Réalisez l'ajout d'un projet directement créé depuis l’interface web de Gitea
+
+Pour créer un projet directement en utilisant l'interface web de Gitea, nous avons cliqué sur le bouton "+" situé en haut à droite de l'interface

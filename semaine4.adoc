@@ -1,5 +1,5 @@
-= Rapport semaine 4
-Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
+= Rapport SAÉ 2.03 - Installation de services réseaux
+Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025 <<<
 :toc:
 :toc-title: Table des matières
 :stylesheet: ./css/custom.css
@@ -10,8 +10,6 @@ Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
 *Qu’est-ce que Gitea ?*
 
 Gitea est une plateforme de code source qui permet de créer, gérer et partager des dépôts Git via une interface web. C'est une alternative plus légère à des solutions comme Github ou Gitlab, permettant de s'auto-héberger et de gérer leurs propres dépôts sans dépendre d'une solution cloud
-
-À quels logiciels bien connus dans ce domaine peut-on le comparer (en citer au moins 2) ?
 
 *Gitea peut être comparé à des logiciels comme (en citer au moins 2) ?*
 

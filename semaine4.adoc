@@ -1,5 +1,9 @@
 = Rapport semaine 4
+Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
 :toc:
+:toc-title: Table des matières
+:stylesheet: ./css/custom.css
+:icons: font
 
 == Question(s) 1. À propos de Gitea
 

@@ -18,8 +18,7 @@ Après avoir téléchargé et décompressé l'archive `autoinstall_Debian.zip` d
 
 [source,bash]
 ----
-sed -i -E "s/(--iprt-iso-maker-file-marker-bourne-sh).*$/\1=$(cat
-/proc/sys/kernel/random/uuid)/" S203-Debian12.viso
+sed -i -E "s/(--iprt-iso-maker-file-marker-bourne-sh).*$/\1=$(cat/proc/sys/kernel/random/uuid)/" S203-Debian12.viso
 ----
 
 Afin de donner les droits sudo à l'utilisateur standard, installer l'environnement MATE et installer des paquets supplémentaires, nous avons modifié le fichier `preseed-fr.cfg` en ajoutant des lignes. Nous avons ajouté les lignes suivantes pour ajouter les droits `sudo` à l'utilisateur standard, installer MATE et des paquets supplémentaires (`sudo`, `git`, `sqlite3`, `curl`, `bash-completion`, `neofetch`) :

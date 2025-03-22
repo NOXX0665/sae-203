@@ -2,7 +2,8 @@
 Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
 :toc:
 :toc-title: Table des matières
-:stylesheet: ./css/custom.css
+// Nous avons inclus un fichier CSS pour ajouter des coins arrondis aux images
+:stylesheet: ./css/default.css
 :icons: font
 
 == Semaine 1 : Installation automatisée de Debian

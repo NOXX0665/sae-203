@@ -332,7 +332,7 @@ Avant de créer des projets, on peut créer différents utilisateurs. Il y a plu
 En tant qu'administrateur, il est possible d'aller dans la page d'administration du site et ensuite accéder à la page "User accounts" pour créer un utilisateurs
 
 .Tutoriel pour accéder à la page de création d'utilisateur
-video::video/admin_creation_user.mp4[]
+image::img/admin_creation_user.gif[Un tutoriel pour accéder à la page de création d'utilisateur, width=75%]
 
 [notoc]
 ===== En tant qu'utilisateur standard
@@ -340,13 +340,22 @@ video::video/admin_creation_user.mp4[]
 Nous pouvons aussi créer des utilisateurs sans être administrateur. Pour cela, il faut se rendre sur la page d'accueil de Gitea et cliquer sur le bouton "Sign up" en haut à droite de l'écran. Il suffit ensuite de remplir les informations demandées pour créer un compte.
 
 .Tutoriel sur la création de comptes sans accès administrateur
-video::video/standard_creation_user.mp4[]
+image::img/standard_creation_user.gif[Un tutoriel sur la création de comptes sans accès administrateur, width=75%]
 
 ==== Création de projets
 
-> Réalisez l'ajout d'un projet directement créé depuis l’interface web de Gitea
+[quote,Mr Carles,Consignes SAE 2.03]
+Réalisez l'ajout d'un projet directement créé depuis l’interface web de Gitea
 
 Pour créer un projet directement en utilisant l'interface web de Gitea, nous avons cliqué sur le bouton "+" situé en haut à droite de l'interface puis sur "New repository". Nous avons ensuite rempli les informations nécessaires pour la création du projet.
+
+.Animation de création de projet
+image::img/user_creation_repo.gif[Une animation montrant un utilisateur qui crée un projet Gitea, width=45%]
+
+Nous pouvons ensuite `git commit` et `git push` sur le projet créé.
+
+.Tutoriel sur la création de projets
+image::img/user_push.gif[Une animation montrant un utilisateur qui "push" des modifications à un projet Gitea, width=45%]
 
 === Questions
 

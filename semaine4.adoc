@@ -250,7 +250,6 @@ Git-gui est une autre interface graphique pour Git, mais par rapport à gitk, el
 Pour l'ouvrir, il suffit de taper la commande `git gui` dans un terminal.
 
 '''
-
 ==== Question 2.Comparons
 
 *Pourquoi avez-vous choisi ce logiciel ?*
@@ -303,9 +302,6 @@ Prise en main difficile, surtout lorsqu'il s'agit de comprendre l'historique des
 
 En conclusion, GitHub Desktop offre une solution simple et accessible pour les utilisateurs qui privilégient une interface graphique sans les difficultés des lignes de commande ou des outils plus complexe comme GitKraken, même qu'il ne soit pas aussi complet que GitKraken.
 
-
-// FIN DE LA SEMAINE 1
-
 == Semaine 4 : Installation du service *Gitea*
 
 === Introduction
@@ -314,11 +310,20 @@ L'objectif de cette semaine (semaine 4) était d'installer et de configurer Gite
 
 === Actions réalisées
 
-Nous avons installé Gitea sur une machine virtuelle Debian 12, en suivant les instructions de la documentation officielle. Nous avons configuré le service pour qu'il fonctionne avec une base de données SQLite3, et nous avons créé un utilisateur administrateur pour gérer la plateforme.
+Nous avons installé Gitea sur une machine virtuelle Debian 12, en suivant les instructions de la documentation officielle^<<source-12,[12]>>^. Nous avons configuré le service pour qu'il fonctionne avec une base de données SQLite3, et nous avons créé un utilisateur administrateur pour gérer la plateforme.
 
 === Problèmes rencontrés durant l'installation
 
-Durant l'installation de Gitea sur les machines virtuelles, nous avons rencontré une erreur avec les permissions du dossier `/etc/gitea`, qui ne permetter pas l'initialisation du fichier `app.ini`
+Durant l'installation de Gitea sur les machines virtuelles, nous avons rencontré une erreur avec les permissions du dossier `/etc/gitea`, qui ne permetter pas l'initialisation du fichier `app.ini`. Nous avons fini par résoudre ce problème en modifiant les permissions du dossier `/etc/gitea` avec la commande suivante :
+
+[source, bash]
+----
+sudo chmod -R 755 /etc/gitea
+----
+
+[NOTE]
+Ils est important de noter que cette commande modifie les permissions de tous les fichiers et dossiers à l'intérieur de `/etc/gitea`, ce qui peut ne pas être souhaitable dans tous les cas.
+Il est donc recommandé de remettre les permissions d'origine après l'installation de Gitea.
 
 === Tests d'utilisation
 
@@ -363,20 +368,20 @@ image::img/user_push.gif[Une animation montrant un utilisateur qui "push" des mo
 
 *Qu’est-ce que Gitea ?*
 
-Gitea est une plateforme de code source qui permet de créer, gérer et partager des dépôts Git via une interface web. C'est une alternative plus légère à des solutions comme Github ou Gitlab, permettant de s'auto-héberger et de gérer leurs propres dépôts sans dépendre d'une solution cloud
+Gitea est une plateforme de gestion de code source qui permet de créer, gérer et partager des dépôts Git via une interface web. C'est une alternative plus légère à des solutions comme Github ou Gitlab, permettant de s'auto-héberger et de gérer leurs propres dépôts sans dépendre d'une solution cloud
 
 *Gitea peut être comparé à des logiciels comme (en citer au moins 2) ?*
 
 . GitHub : Une plateforme populaire de gestion de code source basée sur Git, offrant des services comme la gestion de projets, des wikis, des discussions et plus encore.
-. GitLab : Une autre plateforme similaire à GitHub, mais qui inclut aussi des fonctionnalités d'intégration continue (CI), de livraison continue (CD) et de gestion de pipelines DevOps.
+. GitLab : Une autre plateforme similaire à GitHub, mais qui inclut aussi des fonctionnalités d'intégration continue (CI), de livraison continue (CD) et de gestion de pipelines DevOps.^<<source-13,[13]>>^
 
 *Qu’est-ce qu’un fork (dans le domaine du développement logiciel bien entendu) ?*
 
-Un "fork" est une copie indépendante d'un projet existant. Dans le contexte des plateformes comme GitHub, un fork permet à un utilisateur de prendre un projet open-source, d'y apporter ses propres modifications sans affecter le projet original, et de soumettre ensuite ses changements sous forme de "pull requests" si nécessaire.
+Un "fork" est une copie indépendante d'un projet existant. Dans le contexte des plateformes comme GitHub, un fork permet à un utilisateur de prendre un projet open-source, d'y apporter ses propres modifications sans affecter le projet original, et de soumettre ensuite ses changements sous forme de "pull requests" si nécessaire^<<source-14,[14]>>^.
 
 *De quel logiciel Gitea est-il le fork ? Ce logiciel existe-t-il encore ?*
 
-Gitea est un fork du logiciel Gogs, une autre plateforme de gestion de dépôts Git. Gogs existe toujours, bien qu'il soit moins actif que Gitea, qui a connu une adoption plus large et une communauté plus dynamique.
+Gitea est un fork du logiciel Gogs, une autre plateforme de gestion de dépôts Git. Gogs existe toujours, bien qu'il soit moins actif que Gitea, qui a connu une adoption plus large et une communauté plus dynamique^<<source-15,[15]>>^.
 
 
 
@@ -394,9 +399,8 @@ Nous avons la version 1.23.5 de Gitea.
 
 *Comment faire pour mettre à jour le binaire de votre service sans devoir tout reconfigurer ?*
 
-Pour mettre à jour le binaire de Gitea sans reconfigurer tout le système, il suffit de télécharger la dernière version stable du binaire et de remplacer l'exécutable actuel par le nouveau, comme expliqué précédemment. Cette méthode permet de conserver toutes les configurations existantes, y compris les paramètres de base de données et les utilisateurs.
+Pour mettre à jour le binaire de Gitea sans reconfigurer tout le système, il suffit de télécharger la dernière version stable du binaire et de remplacer l'exécutable actuel par le nouveau, comme expliqué précédemment. Cette méthode permet de conserver toutes les configurations existantes, y compris les paramètres de base de données et les utilisateurs^<<source-16,[16]>>^.
 
-// Remplir avec des nouvelles sources
 <<<
 [bibliography]
 == Sources
@@ -422,3 +426,13 @@ Pour mettre à jour le binaire de Gitea sans reconfigurer tout le système, il s
 * [[source-10]][10] https://www.debian.org/intro/about.fr.html[Debian.org] +
 
 * [[source-11]][11] https://www.debian.org/releases/[Debian Releases]
+
+* [[source-12]][12] https://docs.gitea.io/en-us/install-from-binary/[Gitea Installation] +
+
+* [[source-13]][13] https://www.zdnet.fr/pratique/quelles-differences-entre-github-et-gitlab-39938757.htm[Différences entre Github et Gitlab] +
+
+* [[source-14]][14] https://www.geeksforgeeks.org/git-fork/[Qu'est-ce qu'un fork ?] +
+
+* [[source-15]][15] https://docs.gitea.com/[Documentation Gitea] +
+
+* [[source-16]][16] https://docs.gitea.com/next/installation/upgrade-from-gitea#upgrade-from-binary[Mettre à jour Gitea] +

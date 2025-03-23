@@ -1,6 +1,6 @@
 = Rapport SAÉ 2.03 - Installation de services réseaux
 Dewaele Enzo, Fernandes Bastien, Hamiti Edi. 2025
-:toc:
+:toc: left
 :toc-title: Table des matières
 // Nous avons inclus un fichier CSS pour ajouter des coins arrondis aux images
 :stylesheet: ./css/default.css
@@ -349,7 +349,7 @@ image::img/standard_creation_user.gif[Un tutoriel sur la création de comptes sa
 
 ==== Création de projets
 
-[quote,Mr Carles,Consignes SAE 2.03]
+[quote,Mr Carle,Consignes SAE 2.03]
 Réalisez l'ajout d'un projet directement créé depuis l’interface web de Gitea
 
 Pour créer un projet directement en utilisant l'interface web de Gitea, nous avons cliqué sur le bouton "+" situé en haut à droite de l'interface puis sur "New repository". Nous avons ensuite rempli les informations nécessaires pour la création du projet.
